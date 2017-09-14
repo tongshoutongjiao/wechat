@@ -1,0 +1,31 @@
+<view class="container">
+
+    <view class="secTitle" bindtap="returnSetTeamName">
+        <view><button>完成</button></view>
+    </view>
+    <view class="teamName">
+        <text>{{teamName}}</text>
+    </view>
+    <view>
+        <view class="memberTitle">团队成员</view>
+        <view class="memberList">
+            <block wx:for="{{memberList}}" >
+                <view class="member {{selectId==item.id?'active':''}}" data-nick-name="{{item.nickname}}"    data-id="{{item.id}}" bindtap="actionSheetTap"  >
+                    <view class="layer" >
+                        <image></image>
+                    </view>
+                    <image  class="memberPhoto" src="{{item.headUrl}}"></image>
+                    <view class="memberName">{{item.nickname}}</view>
+                </view>
+            </block>
+        </view>
+
+        <action-sheet  hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+            <view class="deleteTip" hover-class="none" bindtap="loadBy{{item.type}}">确定要删除{{nickName}}吗?</view>
+            <block wx:for-items="{{actionSheetItems}}">
+                <action-sheet-item class="deleteBtnIcon" bindtap="loadBy{{item.type}}">{{item.txt}}</action-sheet-item>
+            </block>
+            <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+        </action-sheet>
+    </view>
+</view>

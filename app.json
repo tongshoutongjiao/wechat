@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teamName/teamName",
+    "pages/createTeam/createTeam",
+    "pages/createWave/createWave",
+    "pages/setWaveDate/setWaveDate",
+    "pages/styleList/styleList",
+    "pages/inviteFriend/inviteFriend",
+    "pages/specStyle/specStyle",
+    "pages/DFList/DFList",
+    "pages/setTeamName/setTeamName",
+    "pages/fixTeamName/fixTeamName",
+    "pages/deleteTeamMember/deleteTeamMember",
+    "pages/dfSpecList/dfSpecList",
+    "pages/joinTeam/joinTeam",
+    "pages/QRcode/QRcode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Bigbench",
+    "navigationBarTextStyle": "#fff"
+  }
+}

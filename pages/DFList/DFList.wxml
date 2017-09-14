@@ -1,0 +1,52 @@
+<view class="container">
+    <view class="listTitle">
+        <view class="imgWrapper">
+            <image src="{{userData.avatarUrl}}"/>
+        </view>
+        <view>
+            <text>{{userData.nickName}}</text>
+        </view>
+    </view>
+
+    <scroll-view scroll-y="true" class="dfList">
+        <view class="dfSpec" wx:for="{{selectList}}">
+
+            <view class="dfTitle" data-folder-id="{{item.folderId}}" data-folder-name="{{item.folderName}}" bindtap="navigatorToPictureList" data-band-id="{{bandId}}">
+                <text>{{item.folderName}}</text>
+                <image/>
+            </view>
+            <view class="dfCon" >
+                <view class="leftImg">
+                    <view class="up imgWrapper">
+                        <image mode="aspectFill"  src="{{item.favorites[0].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
+                        <image mode="aspectFill"  src="{{item.favorites[1].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                </view>
+                <view class="middleImg">
+                    <view class="up imgWrapper" data-favourite-id="{{items.favouriteId}}">
+                        <image mode="aspectFill" src="{{item.favorites[2].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
+                        <image mode="aspectFill" src="{{item.favorites[3].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                </view>
+                <view class="rightImg">
+                    <view class="up imgWrapper" data-favourite-id="{{items.favouriteId}}">
+                        <image mode="aspectFill" src="{{item.favorites[4].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
+                        <image mode="aspectFill" src="{{item.favorites[5].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                </view>
+            </view>
+
+
+
+
+        </view>
+    </scroll-view>
+
+
+</view>

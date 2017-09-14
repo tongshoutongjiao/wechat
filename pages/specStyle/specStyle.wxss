@@ -1,0 +1,81 @@
+.mainImg{
+    position:absolute;
+    top:105rpx;
+    left:10rpx;
+    right:10rpx;
+    bottom:190rpx;
+}
+.mainImg image{
+    display: inline-block;
+    border-radius: 8rpx;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+}
+scroll-view{
+    position: absolute;
+    bottom: 20rpx;
+    left: 10rpx;
+    right: 10rpx;
+    height: 146rpx;
+    white-space: nowrap;
+    width: auto;
+}
+scroll-view .additionImg{
+    display: inline-block;
+    width: 148rpx;
+    height: 146rpx;
+    padding-right: 8rpx;
+
+}
+scroll-view .additionImg image{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    border-radius: 8rpx;
+}
+.addIcon{
+    display:inline-block;
+    width:140rpx;
+    height:100%;
+    padding-top:44rpx;
+    padding-left:41rpx;
+    box-sizing:border-box;
+    background:#fff;
+    border-radius:8rpx;
+    border:1px solid #dfdfdf;
+}
+.addIcon .imgCon{
+    width: 58rpx;
+    height: 58rpx;
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/addImg.png");
+    background-size: cover;
+}
+
+/*二级标题*/
+.secTitle .setIcon{
+
+    float:right;
+    display:inline-block;
+    width:44rpx;
+    height:44rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/deleteIcon.png");
+    background-size:cover;
+    margin-top:34rpx;
+    cursor:pointer;
+    margin-right:45rpx;
+
+
+}
+/* 删除按钮*/
+.deleteTip{
+    font-size:14px;
+    line-height:56rpx;
+    background:#fff;
+    text-align:center;
+    padding:20rpx 0;
+    color:#666;
+}
+
+

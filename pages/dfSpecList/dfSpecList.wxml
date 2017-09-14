@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="secTitle" bindtap="dfUpload">
+        <view>
+            <button>完成</button>
+        </view>
+    </view>
+
+    <scroll-view scroll-y="true" class="content">
+        <view class="imgWrapper {{item.selected?' active':''}} " bindtap="addSelectIcon" data-index="{{item.index}}" data-selected="{{item.selected}}"   wx:for="{{imgList}}"
+              style="top:{{item.top}}rpx;left:{{item.left}}rpx; height:{{item.boxHeight}}rpx;width:{{item.boxWidth}}rpx;">
+            <image class="activeIcon"></image>
+            <view class="{{item.selected?' layer':''}}"></view>
+            <image class="picImage" src="{{item.mediaUrl}}?x-oss-process=image/resize,w_350,limit_0" mode="aspectFill"></image>
+        </view>
+    </scroll-view>
+
+</view>

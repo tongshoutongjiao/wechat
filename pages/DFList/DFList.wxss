@@ -1,0 +1,111 @@
+.listTitle{
+    width: 100%;
+    height: 90rpx;
+    border-bottom:1px solid #c7c7c7;
+    padding: 20rpx 0;
+    box-sizing: border-box;
+}
+.listTitle view{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 56rpx;
+    vertical-align: middle;
+    color:#393539;
+}
+.listTitle .imgWrapper{
+    width: 56rpx;
+    height: 56rpx;
+    margin-right: 14rpx;
+}
+.listTitle .imgWrapper image{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    border-radius: 50%;
+}
+
+
+.dfList{
+    position:absolute;
+    top:90rpx;
+    left:25rpx;
+    right:25rpx;
+    bottom:0;
+    width:auto;
+}
+.dfList .dfSpec{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+}
+.dfList .dfSpec .dfTitle{
+    font-size: 15px;
+    line-height:80rpx ;
+}
+.dfList .dfSpec .dfTitle image{
+    display: inline-block;
+    width:10rpx;
+    height: 18rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/enterIconImg.png ");
+    background-size:cover;
+    float: right;
+    margin-top: 30rpx;
+}
+.dfCon{
+    width: 99.5%;
+    height: 298rpx;
+    display: flex;
+}
+.dfCon view{
+    display: inline-block;
+}
+.dfCon .imgWrapper image{
+    display: inline-block;
+    border-radius: 8rpx;
+    width: 100%;
+    height: 100%;
+}
+.dfCon .imgWrapper{
+    border: 1px solid #c7c7c7;
+    width: 100%;
+    border-radius:8rpx;
+    background:#d8d8d8;
+}
+.leftImg{
+    width: 292rpx;
+    height: 100%;
+    flex: 4;
+}
+.middleImg{
+    width: 230rpx;
+    height: 100%;
+    flex:3;
+}
+.rightImg{
+    width: 186rpx;
+    height: 100%;
+    flex: 2;
+}
+.leftImg .up{
+    height: 162rpx;
+}
+.leftImg .down{
+    height: 136rpx;
+}
+.middleImg .up{
+    height: 136rpx;
+}
+.middleImg .down{
+    height: 162rpx;
+}
+.rightImg .up{
+    height: 184rpx;
+}
+.rightImg .down{
+    height: 114rpx;
+}
+
+
+
+

@@ -1,0 +1,71 @@
+.container{
+    padding:0;
+}
+
+/*内容*/
+.content{
+    background: #fff;
+    width: 100%;
+    height: 175rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    box-sizing: border-box;
+    margin-top:94rpx;
+}
+::-webkit-input-placeholder {
+    color: #c7c7c7;
+    font-size: 16px;
+}
+
+.invite{
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 1px solid #dfdfdf;
+}
+.inviteFriend{
+    font-size: 14px;
+    height: 64rpx;
+    padding-top:20rpx;
+}
+.inviteFriend image{
+    width: 10rpx;
+    height: 18rpx;
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/enterIconImg.png");
+    background-size: cover;
+    float: right;
+    margin-top: 5rpx;
+}
+.updateTime{
+    float: right;
+    margin-right: 25rpx;
+}
+
+.container .titleWrapper{
+    position: absolute;
+    top: 0;
+    left: 0rpx;
+    right: 0rpx;
+    background:#fff;
+    height: 94rpx;
+    padding-right: 20rpx;
+}
+
+/*二级标题*/
+
+.secTitle .closeIcon{
+    float:left;
+    display:inline-block;
+    width:26rpx;
+    height:26rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/closeIcon.png");
+    background-size:cover;
+    margin-top:34rpx;
+    margin-left:18rpx;
+}
+.secTitle view{
+    height: 100%;
+    float: right;
+}

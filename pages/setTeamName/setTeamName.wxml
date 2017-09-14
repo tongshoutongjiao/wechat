@@ -1,0 +1,38 @@
+<view class="container">
+    <block wx:if="{{flag}}">
+        <view data-team-name="teamName" class="teamName" data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}"
+              bindtap="navigatorToFixTeamName">
+            <text>{{teamName}}</text>
+            <image/>
+        </view>
+    </block>
+    <view class="teamName barCode" bindtap="showBarCode" data-meeting-id="{{meetingId}}">
+        <text>团队二维码</text>
+        <image/>
+        <image class="barCodeIcon"/>
+    </view>
+    <view>
+        <view class="memberTitle">团队成员</view>
+        <view class="memberList">
+            <block wx:for="{{memberList}}">
+                <view class="member" data-memberId="{{item.id}}">
+                    <image class="memberPhoto" src="{{item.headUrl}}">{{item.headImg}}</image>
+                    <view class="memberName">{{item.nickname}}</view>
+                </view>
+            </block>
+
+            <view class=" addIcon createImgWrapper" data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}"
+                  bindtap="navigatorToInviteFriend">
+                <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/addImg.png"/>
+            </view>
+            <block wx:if="{{flag&&!onlyOne}}">
+                <view bindtap="navigatorToDeleteTeamMember" class=" plusIcon createImgWrapper"
+                      data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}">
+                    <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/plusIcon.png"/>
+                </view>
+
+            </block>
+
+        </view>
+    </view>
+</view>

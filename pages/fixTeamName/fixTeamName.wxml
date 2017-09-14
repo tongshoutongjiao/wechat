@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="secTitle" bindtap="returnIndex">
+        <view><button>完成</button></view>
+    </view>
+
+    <view class="content">
+        <input class="invite" bindinput="teamNameInput" type="text" value="{{teamName}}" placeholder="请输入团队名"/>
+    </view>
+</view>

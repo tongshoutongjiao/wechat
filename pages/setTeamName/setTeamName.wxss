@@ -1,0 +1,88 @@
+
+.teamName{
+    width: 100%;
+    font-size: 14px;
+    color:#393539;
+    line-height: 88rpx;
+    border-bottom: 1px solid #dfdfdf;
+
+}
+.teamName image{
+    display:inline-block;
+    margin-top:24rpx;
+    width:30rpx;
+    height:30rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/forWord.png");
+    background-size:cover;
+    float:right;
+}
+.teamName .barCodeIcon{
+    display:inline-block;
+    width:30rpx;
+    height:30rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/errCodeIcon.png");
+    margin-right: 30rpx;
+}
+
+/* 成员列表*/
+
+.memberTitle{
+    line-height: 90rpx;
+    width: 100%;
+    font-size:14px;
+    color:#393539;
+    letter-spacing: 0.5rpx;
+}
+.memberList{
+    display: flex;
+    flex-flow: row wrap;
+    align-content:flex-start;
+}
+.memberList .member{
+    margin: 25rpx;
+    font-size: 12px;
+    text-align: center;
+    line-height:45rpx;
+    max-width: 100rpx;
+    overflow: hidden;
+}
+.memberList .member .memberName{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.memberList .member image{
+    display: inline-block;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    background: lightblue;
+}
+/*添加或删除成员*/
+.createImgWrapper{
+    width:92rpx;
+    height:92rpx;
+    border-radius:4rpx;
+    margin-top:30rpx;
+    text-align:center;
+    background:#fff;
+    border:1px solid #dfdfdf;
+    box-sizing:border-box;
+    margin-left:25rpx;
+}
+.addImage{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 22rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.plusIcon .addImage{
+    width: 52rpx;
+    height: 6rpx;
+    margin-top: 34rpx;
+
+}
+
+

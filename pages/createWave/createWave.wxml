@@ -1,0 +1,35 @@
+<view class="container">
+    <view class="secTitle" bindtap="createWaveName">
+        <view>
+            <button>完成</button>
+        </view>
+    </view>
+
+    <view class="content">
+        <input class="invite" bindinput="waveNameInput" type="text" placeholder="请输入波段名字"/>
+        <view class="inviteFriend" bindtap="showPicker">
+            <text>选择上新时间</text>
+            <text class="updateTime">{{year}}年{{month}}月{{day}}日</text>
+        </view>
+    </view>
+
+    <block wx:if="{{isPickerShow}}">
+        <view class="chooseDate">
+            <picker-view indicator-style="height: 52rpx;" value="{{value}}"
+                         bindchange="bindChange">
+                <picker-view-column>
+                    <view wx:for="{{years}}">{{item}}年</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{months}}">{{item}}月</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{days}}">{{item}}日</view>
+                </picker-view-column>
+            </picker-view>
+
+        </view>
+    </block>
+
+
+</view>

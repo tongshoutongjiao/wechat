@@ -1,0 +1,52 @@
+.container{
+    padding:0;
+}
+.content{
+    background: #fff;
+    width: 100%;
+    height: 180rpx;
+    padding-left: -20rpx;
+    padding-right: -20rpx;
+    box-sizing: border-box;
+}
+.invite{
+    width:100%;
+    height:90rpx;
+    line-height:90rpx;
+    font-size:14px;
+    color:#000;
+    border-bottom:1px solid #dfdfdf;
+    padding-left:17rpx;
+}
+::-webkit-input-placeholder {
+    color: #c7c7c7;
+    font-size: 16px;
+}
+.inviteFriend{
+    font-size: 14px;
+    height:90rpx;
+}
+.inviteFriend image{
+    margin: auto;
+    width:24rpx;
+    height:28rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/forWord.png");
+    background-size:cover;
+    margin-top: 30rpx;
+}
+
+/*邀请好友*/
+.inviteFd{
+    display: inline-block;
+    line-height: 90rpx;
+    font-size: 14px;
+    width: 80%;
+    padding-left:20rpx;
+}
+.imgWrapper{
+    display: inline-block;
+    margin-left:85rpx;
+}
+.secTitle view{
+    float: right;
+}

@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="teamName">
+        <text>{{teamName}}</text>
+    </view>
+    <view>
+        <view class="memberTitle">团队成员</view>
+        <view class="memberList">
+            <block wx:for="{{memberList}}">
+                <view class="member" data-member-id="{{item.Id}}">
+                    <image class="memberPhoto" src="{{item.headUrl}}"></image>
+                    <view class="memberName">{{item.nickname}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="memberBtn" bindtap="joinNewTeam">
+        <image class="memberIcon" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/newTeamer.png"/>
+        <button>{{inviteText}}</button>
+    </view>
+</view>

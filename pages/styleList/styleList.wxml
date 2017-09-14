@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="secTitle">
+        <image class="setIcon" data-band-id="{{bandId}}" data-band-name="{{bandName}}" data-sale-time="{{saleTime}}" data-category="{{curSeason}}" bindtap="setWaveName"/>
+    </view>
+    <block wx:if="{{!hasStyleDate}}">
+        <view >
+            <view class="content">
+                <text>点击照片或者DF精选集上传图片</text>
+            </view>
+            <view class="chooseLoadWays">
+                <view class="DCIM" bindtap="actionSheetTap" >照片</view>
+                <view class="onLine" bindtap="clickSelectedOnline">DF精选集</view>
+                <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+                    <block wx:for-items="{{actionSheetItems}}">
+                        <action-sheet-item bindtap="loadBy{{item.type}}">{{item.txt}}</action-sheet-item>
+                    </block>
+                    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+                </action-sheet>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <scroll-view scroll-Y="true" class="styleList">
+            <view class="imgWrapper" wx:for="{{specStyleData}}"  bindtap="navigatorToSpecStyle" data-designer-id="{{item.designId}}"  data-sort-id="{{item.sortId}}"  >
+                <image src="{{item.url}}" />
+            </view>
+        </scroll-view>
+        <view class="chooseLoadWays">
+            <view class="DCIM" bindtap="actionSheetTap" >照片</view>
+            <view class="onLine" bindtap="clickSelectedOnline" data-band-id="{{bandId}}" >DF精选集</view>
+        </view>
+
+    </block>
+</view>

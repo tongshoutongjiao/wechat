@@ -1,0 +1,21 @@
+<view class="container">
+
+
+    <view class="content">
+        <block wx:if="{{hasFillTeamName}}">
+            <view class="secTitle" bindtap="returnIndex">
+                <view bindtap="returnIndex"><button>完成</button></view>
+            </view>
+        </block>
+        <input class="invite" style="margin-top:{{titleHeight}}" bindinput="teamNameInput" type="text" value="{{teamName}}" placeholder="请输入团队名称"/>
+        <view data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}" class="inviteFriend" bindtap="navigatorToInviteFriend">
+            <view class="inviteFd">
+                <text>邀请好友加入</text>
+            </view>
+            <view class="imgWrapper">
+                <image class="enterIcon"/>
+            </view>
+
+        </view>
+    </view>
+</view>

@@ -1,0 +1,171 @@
+.container{
+    padding:10rpx 0rpx;
+}
+
+
+/*副标题*/
+.container .titleWrapper{
+    position: absolute;
+    top: 0;
+    left: 0rpx;
+    right: 0rpx;
+    background:#fff;
+    height: 94rpx;
+    padding-right: 20rpx;
+}
+
+
+
+.secTitle .closeIcon{
+    float:left;
+    display:inline-block;
+    width:26rpx;
+    height:26rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/closeIcon.png");
+    background-size:cover;
+    margin-top:34rpx;
+    margin-left:18rpx;
+}
+.secTitle view{
+    height: 100%;
+    float: right;
+
+}
+.teamName{
+    margin-top: 94rpx;
+    width: 100%;
+    font-size: 14px;
+    line-height: 88rpx;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    padding:0rpx 25rpx ;
+}
+.teamName image{
+    display:inline-block;
+    margin-top:24rpx;
+    width:16rpx;
+    height:30rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/enterIconImg.png ");
+    background-size:cover;
+    float:right;
+}
+
+.barCode{
+    margin-top: 0;
+}
+.teamName .barCodeIcon{
+    display:inline-block;
+    width:30rpx;
+    height:30rpx;
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/errCodeIcon.png");
+    margin-right: 30rpx;
+}
+
+/* 成员列表*/
+
+.memberTitle{
+    line-height: 90rpx;
+    width: 100%;
+    font-size:14px;
+    color:#393539;
+    letter-spacing: 0.5rpx;
+    padding:0rpx 25rpx ;
+}
+.memberList{
+    display: flex;
+    flex-flow: row wrap;
+    align-content:flex-start;
+}
+.memberList .member{
+    margin: 25rpx;
+    max-width: 100rpx;
+    font-size: 12px;
+    text-align: center;
+    line-height:45rpx;
+}
+.memberList .member .memberName{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.memberList .member image{
+    display: none;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+}
+
+/*遮罩层样式效果*/
+.memberList .member .layer{
+    position: relative;
+    display: none;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    background:#d8d8d8;
+}
+
+.memberList .member .layer image{
+    display: inline-block;
+    position: absolute;
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete1.png");
+    right: 0;
+    top:0;
+    left:0;
+    bottom: 0;
+    width: 36rpx;
+    height: 36rpx;
+    margin: auto;
+    background-size: cover;
+}
+
+.memberList .member .layer{
+    display: inline-block;
+}
+.memberList .member .memberPhoto{
+    display: none;
+}
+.memberList .active .layer image{
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete2.png");
+}
+
+
+/*添加或删除成员*/
+.createImgWrapper{
+    width:92rpx;
+    height:92rpx;
+    border-radius:4rpx;
+    margin-top:30rpx;
+    text-align:center;
+    background:#fff;
+    border:1px solid #ddd;
+    box-sizing:border-box;
+    margin-right:28rpx;
+}
+.addImage{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 22rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.plusIcon .addImage{
+    width: 52rpx;
+    height: 6rpx;
+    margin-top: 41rpx;
+}
+.deleteTip{
+    font-size:14px;
+    line-height:56rpx;
+    background:#fff;
+    text-align:center;
+    padding:20rpx 0;
+    color:#666;
+}
+
+
+
+
+

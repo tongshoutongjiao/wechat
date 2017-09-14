@@ -1,0 +1,55 @@
+<view class="container">
+    <view class="titleWrapper">
+        <view class="secTitle" bindtap="finishSetWaveName">
+            <view>
+                <button>完成</button>
+            </view>
+        </view>
+    </view>
+
+    <view class="content">
+        <input class="invite" bindinput="waveNameInput" type="text" placeholder="{{waveName}}"/>
+        <view class="inviteFriend" bindtap="showPicker">
+            <text>选择上新时间</text>
+            <text class="updateTime">{{year}}年{{month}}月{{day}}日</text>
+        </view>
+    </view>
+    <block wx:if="{{isPickerShow}}">
+        <view class="chooseDate">
+            <picker-view indicator-style="height: 52rpx;" value="{{value}}"
+                         bindchange="bindChange">
+                <picker-view-column>
+                    <view wx:for="{{years}}">{{item}}年</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{months}}">{{item}}月</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{days}}">{{item}}日</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </block>
+    <button class="deleteWave" bindtap="actionSheetTap">删除波段</button>
+
+
+    <action-sheet hidden="{{actionSheetHidden}}"  bindchange="actionSheetbindchange">
+        <view class="deleteTip" hover-class="none" bindtap="loadBy{{item.type}}">确定要删除这个波段吗?</view>
+        <block wx:for-items="{{actionSheetItems}}">
+            <action-sheet-item class="deleteIcon" bindtap="loadBy{{item.type}}">{{item.txt}}</action-sheet-item>
+        </block>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

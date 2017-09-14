@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="secTitle">
+        <view></view>
+        <image class="setIcon" bindtap="actionSheetTap"/>
+    </view>
+
+    <view class="mainImg" data-id="{{parStyle.id}}" data-index="{{parStyle.index}}" data-isMain="{{parStyle.isMain?parStyle.isMain:false}}">
+        <image  src="{{parStyle.url}}"/>
+    </view>
+    <scroll-view scroll-X="true" >
+        <view wx:for="{{childStyle}}" wx:key="{{item.id}}" class="additionImg"bindtap="switchDetailPic" data-isMain="{{item.isMain?item.isMain:false}}" data-index="{{item.index}}">
+            <image mode="aspectFill" data-id="{{item.id}}" mode="aspectFill" src="{{item.url}}?x-oss-process=image/resize,m_fill,h_100,w_100"/>
+        </view>
+        <view class="addIcon" bindtap="uploadDetailPic">
+            <view class="imgCon"></view>
+        </view>
+    </scroll-view>
+
+
+    <!--删除部分-->
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+        <view class="deleteTip" hover-class="none" bindtap="loadBy{{item.type}}">确定要删除这张图片吗?</view>
+        <block wx:for-items="{{actionSheetItems}}">
+            <action-sheet-item class="deleteBtnIcon" bindtap="loadBy{{item.type}}" data-id="{{parStyle.id}}" data-is-main="{{parStyle.isMain?parStyle.isMain:false}}">{{item.txt}}</action-sheet-item>
+        </block>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+
+
+
+
+</view>

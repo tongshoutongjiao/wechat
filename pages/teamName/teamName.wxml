@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="secTitle">
+        <image class="setIcon" data-owner-name="{{ownerName}}"  data-meeting-id="{{meetingId}}"  data-team-name="{{teamName}}"  bindtap="setTeamName"/>
+
+    </view>
+    <view class="titleWrapper">
+        <view class="rightWrapper"  bindtap="scrollSeasonR">
+            <image class="rightIcon"></image>
+        </view>
+        <view class="leftWrapper"  bindtap="scrollSeasonL">
+            <image class="leftIcon"></image>
+        </view>
+
+        <scroll-view class="seasonTitle" scroll-x="true" scroll-left="{{left}}">
+            <view wx:for="{{seasonList}}" data-category="{{item.value}}" data-index="{{item.index}}" bindtap="selectSeason" class="seasonName {{item.default&&defaultFlag?'active':''}}  {{selectIndex==item.index?'active':''}} ">
+                <text>{{item.value}}</text>
+            </view>
+        </scroll-view>
+    </view>
+
+    <scroll-view scroll-y="true" class="waveList" >
+        <block  >
+            <view wx:for="{{waveData}}"  data-wave-id="{{item.bandId}}" wx:key="{{item.bandId}}"  class="wavePart">
+                <view class="titleCon" bindtap="navigatorToStyleList" data-band-id="{{item.bandId}}" data-sale-time="{{item.saleTime}}"  data-band-name="{{item.bandName}}" data-category="{{curSeason}}"  >
+                    <view class="waveCon">{{item.bandName}}</view>
+                    <view class="waveTime">{{item.waveTime}}</view>
+                    <image/>
+                </view>
+                <scroll-view class="waveName" scroll-x="true" >
+                    <view class="imgWrapper" wx:for="{{item.list}}" wx:key="designId"  wx:for-item="list">
+                        <image mode="aspectFill"  src="{{list.url}}?x-oss-process=image/resize,w_350,limit_0"/>
+                    </view>
+                </scroll-view>
+            </view>
+        </block>
+
+        <view class="createWave">
+            <view class="createImgWrapper" bindtap="createWaveName" data-meeting-id="{{meetingId}}" data-category="{{curSeason}}"  >
+                <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/addImg.png"/>
+            </view>
+            <view>
+                <text>创建波段</text>
+            </view>
+        </view>
+    </scroll-view>
+
+
+</view>
