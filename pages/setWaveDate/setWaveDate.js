@@ -21,9 +21,6 @@ const option = util.extend(util, {
         ],
     },
     onLoad: function (option) {
-
-        console.log('option');
-        console.log(option);
         this.createDate();
         this.setData({
             waveName: option.bandName,
@@ -39,35 +36,15 @@ const option = util.extend(util, {
         });
         this.getLocalTime();
         this.getCurDate();
-
         wx.setNavigationBarTitle({
             title: '设置波段',
         });
-    },
-    onShow: function () {
-
-    },
-    onReady: function () {
-
-    },
-    onHide: function () {
-    },
-    onUnload: function () {
-    },
-    onPullDownRefresh: function () {
-
-    },
-
-
-    onReachBottom: function () {
-
     },
     waveNameInput: function (e) {
         this.setData({
             waveName: e.detail.value
         })
     },
-    //
     showPicker: function (e) {
         if (!this.data.waveName) {
             wx.showToast({
@@ -84,7 +61,7 @@ const option = util.extend(util, {
         }
 
     },
-// 创建波段
+    // 创建波段
     createWaveName: function (e) {
         let that = this,
             waveName = this.data.waveName,
@@ -152,7 +129,7 @@ const option = util.extend(util, {
         }
     },
 
-//    将当前上新时间字符串转为北京时间，并拿到相应的年月日的值
+    // 将当前上新时间字符串转为北京时间，并拿到相应的年月日的值
     getLocalTime: function () {
         let time = this.data.saleTime;
         let n = time * 1;
@@ -167,8 +144,6 @@ const option = util.extend(util, {
             day: D * 1,
         })
     },
-
-//
     finishSetWaveName: function () {
         console.log(this.data.waveName);
         console.log(this.data.saleTime);
@@ -193,7 +168,7 @@ const option = util.extend(util, {
 
     },
 
-//     发送删除当前波段的请求
+    // 发送删除当前波段的请求
     deleteWaveName: function (bandId) {
         let that = this;
         this.setData({
@@ -217,7 +192,7 @@ const option = util.extend(util, {
         })
     },
 
-//
+    // 底部弹窗组件
     actionSheetTap: function (e) {
         this.setData({
             actionSheetHidden: !this.data.actionSheetHidden
@@ -229,13 +204,12 @@ const option = util.extend(util, {
         })
     },
 
-    //    点击删除按钮，执行相应的删除细节图的操作
+    // 点击删除按钮，执行相应的删除细节图的操作
     loadByDelete: function () {
         let that = this,
             bandId = this.data.bandId;
         this.deleteWaveName(bandId);
     }
-
 });
 Page(option);
 

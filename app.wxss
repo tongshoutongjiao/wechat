@@ -12,19 +12,6 @@
 .tc{
     text-align: center;
 }
-
-/* 二级标题栏*/
-.secTitle{
-    position: absolute;
-    top: 0;
-    height: 94rpx;
-    left: 0;
-    right: 0;
-    color: #fff;
-    font-size: 16px;
-    line-height: 94rpx;
-    text-align: center;
-}
 .secTitle view{
     display: inline-block;
 }

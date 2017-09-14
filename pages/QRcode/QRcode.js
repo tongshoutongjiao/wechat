@@ -9,7 +9,7 @@ const app = getApp();
 const option = util.extend(util, {
     data: {},
     onLoad: function (option) {
-        console.log(option);
+
         wx.setNavigationBarTitle({
             title: '团队二维码',
         });
@@ -27,7 +27,6 @@ const option = util.extend(util, {
                 meetingId:that.data.meetingId
             },
             success:function (d) {
-                console.log(d);
                 if(d.data.result){
                     let  qrUrl=d.data.result.codeUrl;
                     that.setData({
@@ -41,7 +40,6 @@ const option = util.extend(util, {
         })
         
     }
-
 });
 Page(option);
 

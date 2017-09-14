@@ -4,8 +4,6 @@ const app = getApp();
 
 const option = util.extend(util, {
     data: {
-        // 用户是否授权
-        isAuthorization: false,
         actionSheetHidden: true,
         actionSheetItems: [
             {type: 'Delete', txt: '删除'}
@@ -16,32 +14,24 @@ const option = util.extend(util, {
         this.setData({
             designId: option.designerId
         });
-        //    加载页面
+        // 加载页面
         wx.setNavigationBarTitle({
             title: '款页',
         });
         this.getStyleInfo();
-
-
     },
-    onShow: function () {
-
-    },
-
     // 调用接口获取当前主图和配图信息
     getStyleInfo: function () {
         let that = this,
             designId = this.data.designId;
-        console.log(this.data.designId);
         this.request({
             url: `${config.domain}/app/designs/details/${designId}`,
             method: 'GET',
             success: function (d) {
                 let parStyle = d.data.result.mainInfo ? d.data.result.mainInfo : [],
                     childStyle = d.data.result.detailInfo ? d.data.result.detailInfo : [];
-
                 childStyle.unshift(parStyle);
-                //    设置请求到的数据
+                // 设置请求到的数据
                 childStyle.forEach(function (item, index) {
                     if (index == '0') {
                         item.isMain = true;
@@ -68,14 +58,13 @@ const option = util.extend(util, {
         })
     },
 
-
-    //   点击删除按钮，执行相应的删除细节图的操作
+    // 点击删除按钮，执行相应的删除细节图的操作
     loadByDelete: function (e) {
         const that = this;
-        // 两个参数 第一个是photoID 及图片id
-        //另一个就是是否是主图
 
-        // 当该款下只有一张图片时，删除主图之后，直接跳转到上一个页面
+        // 思路：1 两个参数 第一个是photoID 及图片id，另一个就是是否是主图
+
+        //      2 当该款下只有一张图片时，删除主图之后，直接跳转到上一个页面
 
         let isMain = e.currentTarget.dataset.isMain,
             photoId = e.currentTarget.dataset.id,
@@ -93,7 +82,6 @@ const option = util.extend(util, {
                     });
                 }
             })
-
         } else {
             this.request({
                 url: `${config.domain}/app/designs/details/${photoId}/${isMain}`,
@@ -118,10 +106,12 @@ const option = util.extend(util, {
             sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
             sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
             success: function (res) {
+
                 // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                 let tempFilePaths = res.tempFilePaths,
                     bandId = that.data.designId,
                     picList = [];
+
                 //向后台发送请求，获取到上传oss所需要的信息
                 that.getPolicy(tempFilePaths, bandId);
             }
@@ -185,8 +175,6 @@ const option = util.extend(util, {
             icon: 'loading',
             duration: 2000
         });
-
-
         wx.uploadFile({
             url: obj.host,
             filePath: curPic,
@@ -211,13 +199,13 @@ const option = util.extend(util, {
                     that.setData({
                         designList: styleData
                     });
-                    //上传款图片
+                    //  上传款图片
                     that.getDesign(styleData)
                 }
             }
         });
-
     },
+
     // 上传款图片,最多上传9张图片
     getDesign: function (designList) {
         let that = this;
@@ -234,6 +222,7 @@ const option = util.extend(util, {
                 data: JSON.stringify(data)
             },
             success: function (res) {
+
                 // 此处执行回调函数，将本地图片加载到当前页面上
                 that.reloadCurPage();
             }
@@ -245,16 +234,17 @@ const option = util.extend(util, {
         this.getStyleInfo();
     },
 
-// 点击细节图，展示细节图的内容
+    // 点击细节图，展示细节图的内容
     switchDetailPic: function (e) {
-        //     思路：点击当前图片，得到当前图片的信息，将parStyle 中的内容替换为当前图片的内容，同时需要给当前图片增减一个key值，判断当前图片是否为主图
+
+        // 思路：点击当前图片，得到当前图片的信息，
+        //      将parStyle 中的内容替换为当前图片的内容，同时需要给当前图片增减一个key值，判断当前图片是否为主图.
+
         let index = e.currentTarget.dataset.index;
         this.setData({
             parStyle: this.data.childStyle[index]
         })
     }
-
-
 });
 Page(option);
 

@@ -2,7 +2,7 @@ const util = require('../../utils/util');
 const app = getApp();
 const config = require('../../config');
 
-//注：非团主不能进行删除，修改，等操作，可以邀请朋友
+//  注：非团主不能进行删除，修改，等操作，可以邀请朋友
 const option = util.extend(util, {
     data: {
         isAuthorization: app.data.isAuthorization,
@@ -21,11 +21,9 @@ const option = util.extend(util, {
         wx.setNavigationBarTitle({
             title: '团队设置'
         });
-
         this.getMemberInfo();
         this.getUserInfo();
     },
-
     onShow: function () {
         this.getMemberInfo();
         try {
@@ -41,28 +39,10 @@ const option = util.extend(util, {
 
         }
     },
-    onReady: function () {
-
-
-    },
-    onHide: function () {
-
-    },
-    onUnload: function () {
-
-    },
-    onPullDownRefresh: function () {
-
-    },
-    onReachBottom: function () {
-
-    },
 
     // 修改团队名
     navigatorToFixTeamName: function (e) {
         let flag = this.data.userData.nickName === this.data.ownerName;
-
-
         if (flag) {
             wx.navigateTo({url: '/pages/fixTeamName/fixTeamName?' + util.jsonToParam(e.currentTarget.dataset)})
         } else {
@@ -76,9 +56,7 @@ const option = util.extend(util, {
 
     // 邀请朋友加入
     navigatorToInviteFriend: function (e) {
-
         wx.navigateTo({url: '/pages/inviteFriend/inviteFriend?' + util.jsonToParam(e.currentTarget.dataset)});
-
     },
 
     // 删除团队中的某一个人
@@ -94,6 +72,7 @@ const option = util.extend(util, {
             });
         }
     },
+
     // 获取成员列表信息
     getMemberInfo: function () {
         let that = this,
@@ -115,19 +94,15 @@ const option = util.extend(util, {
                     });
 
                 }
-
-
             }
         })
     },
 
-
-//    团队二维码
+    // 团队二维码
     showBarCode: function (e) {
         wx.navigateTo({url: '/pages/QRcode/QRcode?' + util.jsonToParam(e.currentTarget.dataset)});
-
-
     },
+
     //  获取用户信息
     getUserInfo: function (code) {
         let that = this,
@@ -143,7 +118,6 @@ const option = util.extend(util, {
                     userData: userData,
                     flag: flag
                 });
-
             }
         });
     },

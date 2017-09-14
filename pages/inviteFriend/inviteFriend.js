@@ -13,7 +13,6 @@ const option = util.extend(util, {
         memberList: []
     },
     onLoad: function (option) {
-        console.log(option);
         this.setData({
             teamName: option.teamName,
             meetingId: option.meetingId
@@ -24,21 +23,6 @@ const option = util.extend(util, {
         });
         this.getCreatorInfo();
         this.getUserInfo()
-    },
-    onShow: function () {
-
-    },
-    onReady: function () {
-    },
-    onHide: function () {
-    },
-    onUnload: function () {
-    },
-    onPullDownRefresh: function () {
-
-    },
-    onReachBottom: function () {
-
     },
     getCreatorInfo: function () {
         let that = this,
@@ -56,21 +40,21 @@ const option = util.extend(util, {
             }
         });
     },
+
     // 跳转到上新时间设置页面
     navigatorToSetWaveDate: function (e) {
         wx.navigateTo({url: '/pages/setWaveDate/setWaveDate?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
-//     跳转到加入好友界面
+    // 跳转到加入好友界面
     navigatorToJoinTeam: function (e) {
-        console.log('wuwwuwu');
         let meetingId = this.data.meetingId,
             teamName = this.data.teamName,
             nickName = this.data.userData.nickName;
         wx.navigateTo({url: `/pages/joinTeam/joinTeam?meetingId=${meetingId}&teamName=${teamName}`});
     },
 
-// 转发团队信息邀请新的好友加入
+    // 转发团队信息邀请新的好友加入
     onShareAppMessage: function (res) {
         let meetingId = this.data.meetingId,
             teamName = this.data.teamName,
@@ -84,14 +68,12 @@ const option = util.extend(util, {
             path: `/pages/joinTeam/joinTeam?meetingId=${meetingId}&teamName=${teamName}`,
             success: function (res) {
                 // 转发成功,执行成功回调
-                console.log(res);
                 wx.navigateBack({
                     delta: 1
                 })
             },
             fail: function (res) {
                 // 转发失败，执行失败回调
-
             }
         }
     }

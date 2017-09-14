@@ -36,17 +36,12 @@ const option = util.extend(util, {
             title: '创建波段',
         });
     },
-    onShow: function () {
-
-    },
-
     waveNameInput: function (e) {
-        let value= this.trim(e.detail.value);
+        let value = this.trim(e.detail.value);
         this.setData({
             waveName: value
         })
     },
-    //
     showPicker: function (e) {
         if (!this.data.waveName) {
             wx.showToast({
@@ -62,7 +57,7 @@ const option = util.extend(util, {
         }
     },
 
-// 创建波段
+    // 创建波段
     createWaveName: function (e) {
         let that = this,
             waveName = this.data.waveName,
@@ -71,15 +66,16 @@ const option = util.extend(util, {
             saleTime = this.data.saleTime;
 
         // 在用户未点击的时候，获取到时间的当前的年月日
+
         // 在此处添加判断,当用户输入的waveName为空时，先让其输入波段名称，再点击完成
-        if(!waveName){
+        if (!waveName) {
             wx.showToast({
                 title: '请输入波段名',
                 icon: 'loading',
                 duration: 1000,
                 mask: true
             });
-        }else {
+        } else {
             this.request({
                 url: `${config.domain}/app/bands`,
                 method: 'POST',
@@ -117,8 +113,6 @@ const option = util.extend(util, {
             min = this.addZero(d.getMinutes()),
             sec = this.addZero(d.getSeconds());
         str = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-        console.log('标准时间');
-        console.log(str);
         // 波段修改的时间
         this.setData({
             saleTime: str
@@ -126,7 +120,7 @@ const option = util.extend(util, {
         console.log(str);
     },
     createDate: function (e) {
-        for (let i = 2000; i <= date.getFullYear()+1; i++) {
+        for (let i = 2000; i <= date.getFullYear() + 1; i++) {
             years.push(i)
         }
 

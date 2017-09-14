@@ -23,37 +23,12 @@ const option = util.extend(util, {
             meetingId: meetingId,
             teamName: option.teamName
         });
-        //    1 拿到option值，2 获取成员信息 3:渲染当前页面 4 执行删除操作
+        // 1 拿到option值，2 获取成员信息 3:渲染当前页面 4 执行删除操作
         this.getTeamInfo(meetingId);
         this.getUserInfo();
     },
-
-    onShow: function () {
-
-
-    },
-    onReady: function () {
-
-    },
-    onHide: function () {
-
-    },
-    onUnload: function () {
-
-    },
-    onPullDownRefresh: function () {
-
-    },
-    onReachBottom: function () {
-
-    },
     navigatorToInviteFriend: function (e) {
         wx.navigateTo({url: '/pages/inviteFriend/inviteFriend?' + util.jsonToParam(e.currentTarget.dataset)});
-
-    },
-    navigatorToDeleteTeamMember: function () {
-
-
     },
     actionSheetTap: function (e) {
         let that = this;
@@ -73,16 +48,16 @@ const option = util.extend(util, {
         })
     },
 
-//     获取成员列表信息
+    // 获取成员列表信息
     getTeamInfo: function (teamId) {
         this.getMemberInfo(teamId);
 
     },
-//    点击删除按钮，执行相应的操作
+
+    // 点击删除按钮，执行相应的操作
     loadByDelete: function () {
+
         // 判断当前用户是否为建团的人，如果是的话，不能删除自己
-
-
         let ownerName = this.data.userData.nickName,
             that = this,
             meetingId = this.data.meetingId,
@@ -94,8 +69,8 @@ const option = util.extend(util, {
                 success: function (response) {
                     let memberData=that.data.memberList;
                     memberData.forEach(function (item,index) {
-                        //遍历所有的
-                        if(item.id===selectId){
+                        //遍历所有的用户列表
+                       if(item.id===selectId){
                             memberData.splice(index,1);
                             return;
                         }
@@ -106,7 +81,8 @@ const option = util.extend(util, {
                     });
                 }
             })
-        }else {
+        }
+        else {
             wx.showToast({
                 title: '没有操作权限',
                 icon: 'fail',
@@ -117,14 +93,12 @@ const option = util.extend(util, {
 
     },
 
-//    点击完成，返回到上一级页面
+    // 点击完成，返回到上一级页面
     returnSetTeamName: function (e) {
         wx.navigateBack({
             delta: 1
         })
     }
-
-
 });
 Page(option);
 

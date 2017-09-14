@@ -19,31 +19,11 @@ const option = util.extend(util, {
         });
 
     },
-    onShow: function () {
 
-
-    },
-    onReady: function () {
-    },
-    onHide: function () {
-    },
-    onUnload: function () {
-    },
-    onPullDownRefresh: function () {
-
-    },
-    onReachBottom: function () {
-
-    },
     teamNameInput: function (e) {
-        console.log(e);
-
         this.setData({
             teamName: e.detail.value
         });
-
-
-
     },
     returnIndex:function () {
         const that=this;
@@ -57,7 +37,8 @@ const option = util.extend(util, {
                 meetingName:meetingName
             },
             success:function (d) {
-            //回调跳转到首页的函数，
+
+            //  回调跳转到首页的函数
                 wx.setStorageSync('teamName', that.data.teamName);
                 wx.navigateBack({
                     delta: 1

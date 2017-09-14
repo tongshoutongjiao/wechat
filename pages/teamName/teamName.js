@@ -8,8 +8,8 @@ const option = util.extend(util, {
         isAuthorization: app.data.isAuthorization,
         seasonList: [],
         defaultFlag: true,
-        screenWidth:app.data.system.screenWidth,
-        left:0
+        screenWidth: app.data.system.screenWidth,
+        left: 0
     },
     onLoad: function (option) {
         // 设置title
@@ -24,19 +24,19 @@ const option = util.extend(util, {
             ownerName: option.ownerName
         });
 
-
-
-
         this.getListData();
     },
     onShow: function () {
-        this.getListData();
-    },
 
+        // 修改波段后，重新进入波段页的显示问题
+        let curSeason=this.data.curSelectedSeason;
+        this.getWaveDate(curSeason);
+    },
     createWaveName: function (e) {
 
         wx.navigateTo({url: '/pages/createWave/createWave?' + util.jsonToParam(e.currentTarget.dataset)});
     },
+
     // 跳转到款列表页面
     navigatorToStyleList: function (e) {
         console.log(e);
@@ -44,7 +44,7 @@ const option = util.extend(util, {
         wx.navigateTo({url: '/pages/styleList/styleList?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
-//    获取表头的数据
+    // 获取表头的数据
     getListData: function () {
         let metId = this.data.meetingId;
         const that = this;
@@ -83,38 +83,40 @@ const option = util.extend(util, {
                     curSeason: curSeason,
                     waveData: data.bandList,
                 });
-                console.log('data');
-                console.log(data);
             }
         })
     },
 
-
-//     点击当前季节，清除默认样式,添加选中样式，以及获取相应的波段数据。
+    // 点击当前季节，清除默认样式,添加选中样式，以及获取相应的波段数据。
     selectSeason: function selectSeason(e) {
-        this.setData({
-            defaultFlag: false,
-            selectIndex: e.currentTarget.dataset.index
-        });
 
         let category = e.currentTarget.dataset.category;
+
+        // 记录当前已经选中的季节样式，保存到data数据中
+        this.setData({
+            defaultFlag: false,
+            selectIndex: e.currentTarget.dataset.index,
+            curSelectedSeason:category
+        });
 
         // 获取波段数据
         this.getWaveDate(category);
     },
 
-//     波段数据
+    // 波段数据
     getWaveDate: function (category) {
         let that = this,
-            meetingId=this.data.meetingId;
+            meetingId = this.data.meetingId;
 
-        //    根据点击不同的季度，传递不同的值，然后将返回的数据绑定在页面上
+        // 根据点击不同的季度，传递不同的值，然后将返回的数据绑定在页面上
         this.request({
             url: `${config.domain}/app/meetings/categorys/${meetingId}/${category}`,
             method: 'GET',
             success: function (d) {
+
                 // 对bandList下边的上新时间修改
                 that.formatCurDate(d.data.result);
+
                 // 保存调整后的数据
                 that.setData({
                     waveData: d.data.result,
@@ -125,49 +127,40 @@ const option = util.extend(util, {
         });
     },
 
-
-//  设置团队名称及团队成员列表
+    // 设置团队名称及团队成员列表
     setTeamName: function (e) {
         wx.navigateTo({url: '/pages/setTeamName/setTeamName?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
-
-//   格式化上新时间
-    formatCurDate:function(d){
-        const that=this;
+    // 格式化上新时间
+    formatCurDate: function (d) {
+        const that = this;
         d.forEach(function (item) {
-            item.waveTime=that.formatDate(item.saleTime)
+            item.waveTime = that.formatDate(item.saleTime)
         })
     },
 
-//    点击左按钮，向左滑动
-    scrollSeasonL:function () {
-
-        //
-        if(this.data.left>0){
-            let conWidth=this.data.screenWidth-30;
-            this.data.left-=conWidth/4;
+    // 点击左按钮，向左滑动
+    scrollSeasonL: function () {
+        if (this.data.left > 0) {
+            let conWidth = this.data.screenWidth - 30;
+            this.data.left -= conWidth / 4;
             this.setData({
-                left:this.data.left
+                left: this.data.left
             });
         }
     },
 
-//    点击右按钮，向右滑动
-    scrollSeasonR:function () {
-
-        let conWidth=this.data.screenWidth-30;
-
-        if(this.data.left>=0&&this.data.left<=344){
-            this.data.left+=conWidth/4;
+    // 点击右按钮，向右滑动
+    scrollSeasonR: function () {
+        let conWidth = this.data.screenWidth - 30;
+        if (this.data.left >= 0 && this.data.left <= 344) {
+            this.data.left += conWidth / 4;
             this.setData({
-                left:this.data.left
+                left: this.data.left
             });
         }
-
-        console.log('456')
     }
-
 });
 
 Page(option);

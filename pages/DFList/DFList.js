@@ -16,21 +16,6 @@ const option = util.extend(util, {
         this.getUserInfo();
 
     },
-    onShow: function () {
-
-    },
-    onReady: function () {
-    },
-    onHide: function () {
-    },
-    onUnload: function () {
-    },
-    onPullDownRefresh: function () {
-
-    },
-    onReachBottom: function () {
-
-    },
     getSelectData: function (e) {
         let that=this;
         this.request({
@@ -43,7 +28,7 @@ const option = util.extend(util, {
                     that.setData({
                         selectList:data
                     });
-                    //将精选集中的数据存储为app级别的数据，以便后边列表页读取
+                    //  将精选集中的数据存储为app级别的数据，以便后边列表页读取
                     app.data.dfDate=data;
                 }
             }

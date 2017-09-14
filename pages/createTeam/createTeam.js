@@ -15,13 +15,8 @@ const option = util.extend(util, {
             title: '创建团队',
         });
     },
-    onShow: function () {
-
-    },
-
     teamNameInput: function (e) {
         let valueText = e.detail.value;
-
         this.setData({
             teamName: valueText
         })
@@ -40,7 +35,7 @@ const option = util.extend(util, {
         }
     },
 
-//     创建团队
+    // 创建团队
     createTeamName: function (e) {
         let that = this,
             teamName = this.trim(this.data.teamName);
@@ -64,7 +59,7 @@ const option = util.extend(util, {
         })
     },
 
-//    返回首页
+    // 返回首页
     returnIndex:function () {
         wx.navigateBack({
             delta: 1

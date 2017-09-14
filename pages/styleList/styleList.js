@@ -8,8 +8,6 @@ const app = getApp();
 
 const option = util.extend(util, {
     data: {
-        // 用户是否授权
-        isAuthorization: false,
         hasStyleDate: false,
         actionSheetHidden: true,
         specStyleData: [],
@@ -37,11 +35,15 @@ const option = util.extend(util, {
     },
     actionSheetTap: function () {
         const that = this;
+
+        // 上传图片的函数，可以将其写在公共的方法utils文件下
+
         wx.chooseImage({
-            count: 9, // 默认9
-            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            count: 9,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
             success: function (res) {
+
                 // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                 let tempFilePaths = res.tempFilePaths,
                     bandId = that.data.bandId;
@@ -78,27 +80,12 @@ const option = util.extend(util, {
         })
     },
 
-    /*
-     *obj
-     * accessKeyId
-     * signature
-     * expire
-     * host
-     * keyList
-     * policy
-     * status
-     *
-     * */
-
-    // 向服务器上传图片信息
     uploadImg: function (obj) {
         const that = this;
 
         // 获取到上传图片的后缀名，然后将其添加到keyList的后缀名中
         let picSuffix = [],
             keyListArray = [];
-
-
         obj.picUrl.forEach(function (item, index) {
             let afterName = item.substring(item.lastIndexOf('.') + 1),
                 suffix = '.' + afterName;
@@ -111,7 +98,6 @@ const option = util.extend(util, {
 
         // 将拼接后的图片再次存放到 obj 对象中
         obj.keyListArray = keyListArray;
-
         obj.picUrl.forEach(function (item, index) {
 
             // 执行函数，分别将单张图片上传到阿里云,上传成功后，执行上传款的操作
@@ -128,8 +114,6 @@ const option = util.extend(util, {
             icon: 'loading',
             duration: 2000
         });
-
-
         wx.uploadFile({
             url: obj.host,
             filePath: curPic,
@@ -160,18 +144,16 @@ const option = util.extend(util, {
                         duration: 2000
                     });
 
-                    //上传款图片
+                    // 上传款图片
                     that.getDesign(styleData)
                 }
             }
         });
 
     },
-
     navigatorToSpecStyle: function (e) {
         console.log(e);
         wx.navigateTo({url: '/pages/specStyle/specStyle?' + util.jsonToParam(e.currentTarget.dataset)});
-
     },
     getStyleList: function () {
         let bandId = this.data.bandId,
@@ -189,12 +171,12 @@ const option = util.extend(util, {
         });
     },
 
-//     跳转到设置波段的界面
+    // 跳转到设置波段的界面
     setWaveName: function (e) {
         wx.navigateTo({url: '/pages/setWaveDate/setWaveDate?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
-// 上传款图片,最多上传9张图片
+    // 上传款图片,最多上传9张图片
     getDesign: function (designList) {
         let that = this;
         console.log('designList');
@@ -212,13 +194,14 @@ const option = util.extend(util, {
                 data: JSON.stringify(data)
             },
             success: function (res) {
-                // 此处执行回调函数，将本地图片加载到当前页面上
 
+                // 此处执行回调函数，将本地图片加载到当前页面上
                 that.reloadCurPage();
             }
         })
     },
-//
+
+    // 上传成功后，执行回调函数，重新获取当前列表的数据
     reloadCurPage: function () {
         this.getStyleList();
     }

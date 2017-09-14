@@ -12,7 +12,7 @@ const option = util.extend(util, {
     },
     onLoad: function () {
 
-        //    调用发送ajax请求，获取首页的团队列表数据
+        // 调用发送ajax请求，获取首页的团队列表数据
         const that = this;
         app.onReadyPage(function () {
             if (app.data.loadSuccess === false) {
@@ -38,7 +38,7 @@ const option = util.extend(util, {
         wx.navigateTo({url: '/pages/createTeam/createTeam?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
-    // 获取团队名
+    //  获取团队名
     getTeamDate: function () {
         const that = this;
         util.request({
@@ -57,6 +57,8 @@ const option = util.extend(util, {
             }
         })
     },
+
+    // 添加团队图标
     addTeamIcon: function (data) {
         let iconList = ['green.png', 'yellow.png', 'lightBlue.png'];
         data.forEach(function (item, index) {
@@ -64,6 +66,8 @@ const option = util.extend(util, {
             item.teamIcon = `${suffixIcon}${iconList[index % 3]}`;
         });
     },
+
+    // 首页转发功能
     onShareAppMessage: function (res) {
         if (res.from === 'button') {
             // 来自页面内转发按钮
@@ -80,7 +84,6 @@ const option = util.extend(util, {
             }
         }
     }
-
 });
 Page(option);
 
