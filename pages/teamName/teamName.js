@@ -8,10 +8,12 @@ const option = util.extend(util, {
         isAuthorization: app.data.isAuthorization,
         seasonList: [],
         defaultFlag: true,
+        hasGetDate:false,
         screenWidth: app.data.system.screenWidth,
         left: 0
     },
     onLoad: function (option) {
+
         // 设置title
         wx.setNavigationBarTitle({
             title: option.teamName,
@@ -28,9 +30,8 @@ const option = util.extend(util, {
     },
     onShow: function () {
 
-        // 修改波段后，重新进入波段页的显示问题
         let curSeason=this.data.curSelectedSeason;
-        this.getWaveDate(curSeason);
+        curSeason?this.getWaveDate(curSeason):this.getListData();
     },
     createWaveName: function (e) {
 
@@ -48,43 +49,54 @@ const option = util.extend(util, {
     getListData: function () {
         let metId = this.data.meetingId;
         const that = this;
-        this.request({
-            url: `${config.domain}/app/meetings/page/${metId}`,
-            type: 'GET',
-            success: function (d) {
+        if(!this.data.hasGetDate){
+            console.log('llalla');
+            this.request({
+                url: `${config.domain}/app/meetings/page/${metId}`,
+                type: 'GET',
+                success: function (d) {
 
-                let data = d.data.result ? d.data.result : '',
-                    sea = data.categorys,
-                    curSeason = data.category,
-                    ary = [];
+                    let data = d.data.result ? d.data.result : '',
+                        sea = data.categorys,
+                        curSeason = data.category,
+                        ary = [];
 
-                // 修改category下季节结构,方便添加点击效果
-                for (let key in sea) {
-                    if (curSeason == sea[key]) {
-                        ary.push({
-                            index: key,
-                            value: sea[key],
-                            default: true,
+
+                    if(data){
+                        // 修改category下季节结构,方便添加点击效果
+                        for (let key in sea) {
+                            if (curSeason == sea[key]) {
+                                ary.push({
+                                    index: key,
+                                    value: sea[key],
+                                    default: true,
+                                });
+                            } else {
+                                ary.push({
+                                    index: key,
+                                    value: sea[key]
+                                })
+                            }
+                        }
+
+                        // 对bandList下边的上新时间修改
+                        that.formatCurDate(data.bandList);
+
+                        // 保存修改后的数据
+                        that.setData({
+                            seasonList: ary,
+                            curSeason: curSeason,
+                            waveData: data.bandList,
+                            hasGetDate:true
                         });
-                    } else {
-                        ary.push({
-                            index: key,
-                            value: sea[key]
-                        })
                     }
                 }
+            })
+        }else {
+            console.log('wuwuwu');
+           this.getListData();
+        }
 
-                // 对bandList下边的上新时间修改
-                that.formatCurDate(data.bandList);
-
-                // 保存修改后的数据
-                that.setData({
-                    seasonList: ary,
-                    curSeason: curSeason,
-                    waveData: data.bandList,
-                });
-            }
-        })
     },
 
     // 点击当前季节，清除默认样式,添加选中样式，以及获取相应的波段数据。

@@ -96,7 +96,7 @@ exports.getUserInfo = function () {
             console.log('resUser');
             that.setData({
                 userData: resUser.userInfo
-            })
+            });
         }
     })
 };
