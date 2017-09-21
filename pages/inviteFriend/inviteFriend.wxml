@@ -1,12 +1,12 @@
 <view class="container">
-    <view class="teamName">
+   <!-- <view class="teamName">
         <text>{{teamName}}</text>
-    </view>
+    </view>-->
     <view>
         <view class="memberTitle">团队成员</view>
         <view class="memberList">
             <block wx:for="{{memberList}}" >
-                <view class="member"  data-member-id="{{item.Id}}">
+                <view class="member" bindtap="navigatorToJoinTeam"  data-member-id="{{item.Id}}">
                     <image class="memberPhoto" src="{{item.headUrl}}"></image>
                     <view class="memberName"  >{{item.nickname}}</view>
                 </view>

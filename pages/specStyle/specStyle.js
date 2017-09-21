@@ -11,14 +11,34 @@ const option = util.extend(util, {
     },
     onLoad: function (option) {
         console.log(option);
-        this.setData({
-            designId: option.designerId
+        const that = this;
+        let scene;
+        console.log(option);
+        app.onReadyPage(function () {
+            if (app.data.loadSuccess === false) {
+                that.setData({
+                    loadSuccess: false
+                });
+                return false;
+            } else {
+                that.setData({
+                    loadSuccess: true
+                });
+            }
         });
         // 加载页面
         wx.setNavigationBarTitle({
             title: '款页',
         });
-        this.getStyleInfo();
+        // 通过扫码进入加入团队页面，先获取二维码中的scene值
+        option.scene ? scene = decodeURIComponent(option.scene) : '';
+
+        // 判断是否使用二维码中传递的参数
+        scene ? this.splitScene(scene) : this.setData({
+          designId:option.designerId
+        });
+
+        app.onReadyPage(this.getStyleInfo());
     },
     // 调用接口获取当前主图和配图信息
     getStyleInfo: function () {
@@ -244,7 +264,24 @@ const option = util.extend(util, {
         this.setData({
             parStyle: this.data.childStyle[index]
         })
+    },
+
+    //以逗号分隔截取字符串
+    splitScene: function (scene,option) {
+        let sceneArray;
+        if (scene.indexOf(',') != -1) {
+            sceneArray = scene.split(',');
+            this.setData({
+                designId: sceneArray[0]
+            });
+        } else {
+            this.setData({
+                designId: scene
+            });
+        }
     }
+
+
 });
 Page(option);
 

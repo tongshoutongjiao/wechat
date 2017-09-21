@@ -2,7 +2,6 @@
     line-height: 90rpx;
     width: 100%;
     font-size:14px;
-     color: #bbb;
     letter-spacing: 0.5rpx;
     border-bottom:1px solid #ddd ;
     box-sizing: border-box;
@@ -24,6 +23,16 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.memberList .member view{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
 .memberList .member image{
     display: inline-block;
     width: 90rpx;
@@ -33,14 +42,14 @@
 }
 .memberBtn{
     position: relative;
-    width:550rpx;
+    width:100%;
     margin:auto;
     text-align:center;
     font-size: 14px;
     color: #fff;
     line-height: 70rpx;
     border-radius: 8rpx;
-    margin-top: 100rpx;
+    margin-top: 45rpx;
 }
 .memberBtn button{
     position:absolute;
@@ -48,7 +57,7 @@
     left:0;
     width:100%;
     background:#18a5e2;
-    font-size:14px;
+    font-size:16px;
     color:#fff;
     line-height:80rpx;
     padding-left:35px;
@@ -61,7 +70,7 @@
     display:inline-block;
     width:35rpx;
     height:35rpx;
-    left:29%;
+    left:30%;
     top:23rpx;
 }
 

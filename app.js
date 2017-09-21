@@ -31,7 +31,7 @@ const option = extend(require('./utils/readyEvent'), {
             success: function (res) {
                 if (res.code) {
                     //发起网络请求
-
+                    console.log(res.code);
                     that.getUserInfo(res.code);
                 } else {
                     console.log('获取用户登录态失败！' + res.errMsg)
@@ -56,6 +56,7 @@ const option = extend(require('./utils/readyEvent'), {
                 encryptedData: encryptedData
             },
             success: function (response) {
+                console.log(response);
                 let res = response.data;
                 if(res){
                     // token
@@ -64,7 +65,6 @@ const option = extend(require('./utils/readyEvent'), {
                 }
             },
             fail: function (err) {
-
                 that.loadFail('请求sessionStr失败');
                 console.error('getSessionStr fail', err.errMsg);
             }
@@ -92,6 +92,8 @@ const option = extend(require('./utils/readyEvent'), {
             userData;
         wx.getUserInfo({
             success: function (resUser) {
+                console.log(resUser);
+                console.log(JSON.parse(resUser.rawData).nickName);
                 that.data.userInfo = resUser.userInfo;
                 that.getSessionStr(code, resUser);
                 userData = resUser.userInfo;

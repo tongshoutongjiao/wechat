@@ -30,6 +30,7 @@ const option = util.extend(util, {
                 mask: true
             });
         } else {
+            console.log('wuwuwu');
             // 调用创建团队接口，创建成功，跳转到下一个页面
             this.createTeamName(e);
         }
@@ -46,6 +47,7 @@ const option = util.extend(util, {
                 meetingName: teamName
             },
             success: function (d) {
+                console.log('defense');
                 console.log(d);
                 let data = d.data.result ? d.data.result : '';
                 if(data){
@@ -65,6 +67,7 @@ const option = util.extend(util, {
             delta: 1
         })
     }
+
 });
 Page(option);
 

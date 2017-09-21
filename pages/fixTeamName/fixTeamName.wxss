@@ -6,7 +6,6 @@
     padding-left:20rpx;
     padding-right:20rpx;
     box-sizing:border-box;
-    margin-top:94rpx;
     background:#fff;
 }
 .invite{
@@ -15,7 +14,6 @@
     line-height: 90rpx;
     font-size: 14px;
     color: #000;
-    border-bottom: 1px solid #dfdfdf;
     opacity: 0.61;
 }
 ::-webkit-input-placeholder {
@@ -35,13 +33,18 @@
     padding-right: 20rpx;
 }
 
-.secTitle{
-    position: absolute;
-    top: 0;
-    left: 20rpx;
-    right: 20rpx;
-    height: 94rpx;
+.secTit{
+    height:94rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    margin-top: 83rpx;
 }
+.secTit button{
+    background: #18a5e2;
+    font-size: 16px;
+    color: #fff;
+}
+
 .secTitle .closeIcon{
     float:left;
     display:inline-block;

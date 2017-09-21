@@ -10,7 +10,6 @@
     padding-left: 20rpx;
     padding-right: 20rpx;
     box-sizing: border-box;
-    margin-top:94rpx;
 }
 ::-webkit-input-placeholder {
     color: #c7c7c7;
@@ -27,8 +26,6 @@
 }
 .inviteFriend{
     font-size: 14px;
-    height: 64rpx;
-    padding-top:20rpx;
 }
 .inviteFriend image{
     width: 10rpx;
@@ -38,11 +35,6 @@
     float: right;
     margin-top: 5rpx;
 }
-.updateTime{
-    float: right;
-    margin-right: 25rpx;
-}
-
 .container .titleWrapper{
     position: absolute;
     top: 0;
@@ -65,7 +57,24 @@
     margin-top:34rpx;
     margin-left:18rpx;
 }
-.secTitle view{
-    height: 100%;
+
+.secTit{
+    height:94rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    margin-top: 83rpx;
+}
+.secTit button{
+    background: #18a5e2;
+    font-size: 16px;
+    color: #fff;
+    line-height: 80rpx;
+}
+.textWrapper{
+    display: inline-block;
+    line-height: 90rpx;
+}
+.wrapperRight{
     float: right;
 }
+

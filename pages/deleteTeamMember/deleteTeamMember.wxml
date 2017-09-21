@@ -1,8 +1,6 @@
 <view class="container">
 
-    <view class="secTitle" bindtap="returnSetTeamName">
-        <view><button>完成</button></view>
-    </view>
+
     <view class="teamName">
         <text>{{teamName}}</text>
     </view>
@@ -27,5 +25,8 @@
             </block>
             <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
         </action-sheet>
+    </view>
+    <view class="secTit" bindtap="returnSetTeamName">
+        <view><button>完成</button></view>
     </view>
 </view>

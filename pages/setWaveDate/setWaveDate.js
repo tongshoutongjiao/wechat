@@ -14,7 +14,7 @@ const option = util.extend(util, {
         // 用户是否授权
         isAuthorization: false,
         waveName: '',
-        isPickerShow: false,
+        isPickerShow: true,
         actionSheetHidden: true,
         actionSheetItems: [
             {type: 'Delete', txt: '删除'}
@@ -116,7 +116,7 @@ const option = util.extend(util, {
         console.log(str);
     },
     createDate: function (e) {
-        for (let i = 1990; i <= date.getFullYear()+6; i++) {
+        for (let i = 2000; i <= date.getFullYear()+10; i++) {
             years.push(i)
         }
 
@@ -131,7 +131,7 @@ const option = util.extend(util, {
 
     // 将当前上新时间字符串转为北京时间，并拿到相应的年月日的值
     getLocalTime: function () {
-        let time = this.data.saleTime;
+        let time = this.data.saleTime=='null'?new Date():this.data.saleTime;
         let n = time * 1;
         let date = new Date(n);
         let Y = date.getFullYear();

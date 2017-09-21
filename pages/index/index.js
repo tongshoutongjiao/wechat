@@ -13,20 +13,21 @@ const option = util.extend(util, {
     onLoad: function () {
 
         // 调用发送ajax请求，获取首页的团队列表数据
+        console.log(this);
         const that = this;
-        app.onReadyPage(function () {
-            if (app.data.loadSuccess === false) {
-                that.setData({
-                    loadSuccess: false
-                });
-                return false;
-            } else {
-                that.setData({
-                    loadSuccess: true
-                });
+        let screenHeight;
+        screenHeight=this.app.data.system.screenHeight;
+        console.log(screenHeight);
+        app.onReadyPage(this.getTeamDate.bind(this));
+        this.setData({
+            deviceHeight:screenHeight
+        });
+        wx.getUserInfo({
+            success: function (resUser) {
+                console.log(resUser);
             }
         });
-        app.onReadyPage(this.getTeamDate.bind(this));
+        // this.splitScene(scene)
     },
     onShow: function () {
         this.getTeamDate();
@@ -76,14 +77,31 @@ const option = util.extend(util, {
         return {
             title: 'bigBench',
             path: '/pages/index/index',
-            success: function(res) {
+            success: function (res) {
                 // 转发成功
             },
-            fail: function(res) {
+            fail: function (res) {
                 // 转发失败
             }
         }
+    },
+
+    //以逗号分隔截取字符串
+    splitScene: function (scene) {
+        let sceneArray;
+        if (scene.indexOf(',') !=-1) {
+            sceneArray = scene.split(',');
+        } else {
+            sceneArray = scene;
+        }
+        console.log(sceneArray);
+    },
+    myTouchMove:function (e) {
+        console.log(e);
+        e.preventDefault();
     }
+
+
 });
 Page(option);
 

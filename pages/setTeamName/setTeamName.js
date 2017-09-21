@@ -30,7 +30,7 @@ const option = util.extend(util, {
             let value = wx.getStorageSync('teamName');
             if (value) {
                 this.setData({
-                    teamName:value
+                    teamName: value
                 });
                 wx.clearStorageSync()
             }
@@ -92,7 +92,6 @@ const option = util.extend(util, {
                         memberList: memberDate,
                         onlyOne: false
                     });
-
                 }
             }
         })
@@ -103,17 +102,38 @@ const option = util.extend(util, {
         wx.navigateTo({url: '/pages/QRcode/QRcode?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
+    //测试扫描团队二维码页面，点击跳转到邀请加入好友页面
+    returnToJoinTeam: function (e) {
+        wx.navigateTo({url: '/pages/joinTeam/joinTeam?' + util.jsonToParam(e.currentTarget.dataset)});
+    },
+
     //  获取用户信息
     getUserInfo: function (code) {
         let that = this,
             userData;
         wx.getUserInfo({
             success: function (resUser) {
-
                 that.data.userInfo = resUser.userInfo;
                 userData = resUser.userInfo;
+                console.log(userData.nickName);
+                console.log(that.data.ownerName);
+
 
                 let flag = userData.nickName === that.data.ownerName;
+
+
+
+
+                console.log('flag');
+                console.log(flag);
+
+
+
+
+
+
+
+
                 that.setData({
                     userData: userData,
                     flag: flag

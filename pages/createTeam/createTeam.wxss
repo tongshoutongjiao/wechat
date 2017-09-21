@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 .invite{
-    width:100%;
+    width:97%;
     height:90rpx;
     line-height:90rpx;
     font-size:14px;
@@ -47,6 +47,15 @@
     display: inline-block;
     margin-left:85rpx;
 }
-.secTitle view{
-    float: right;
+.secTit{
+    height:94rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    margin-top: 83rpx;
+}
+.secTit button{
+    background: #18a5e2;
+    font-size: 14px;
+    color: #fff;
+    line-height: 80rpx;
 }

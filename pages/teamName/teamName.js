@@ -8,7 +8,7 @@ const option = util.extend(util, {
         isAuthorization: app.data.isAuthorization,
         seasonList: [],
         defaultFlag: true,
-        hasGetDate:false,
+        hasGetDate: false,
         screenWidth: app.data.system.screenWidth,
         left: 0
     },
@@ -30,8 +30,8 @@ const option = util.extend(util, {
     },
     onShow: function () {
 
-        let curSeason=this.data.curSelectedSeason;
-        curSeason?this.getWaveDate(curSeason):this.getListData();
+        let curSeason = this.data.curSelectedSeason;
+        curSeason ? this.getWaveDate(curSeason) : this.getListData();
     },
     createWaveName: function (e) {
 
@@ -49,53 +49,52 @@ const option = util.extend(util, {
     getListData: function () {
         let metId = this.data.meetingId;
         const that = this;
-        if(!this.data.hasGetDate){
-            console.log('llalla');
-            this.request({
-                url: `${config.domain}/app/meetings/page/${metId}`,
-                type: 'GET',
-                success: function (d) {
 
-                    let data = d.data.result ? d.data.result : '',
-                        sea = data.categorys,
-                        curSeason = data.category,
-                        ary = [];
+        this.request({
+            url: `${config.domain}/app/meetings/page/${metId}`,
+            type: 'GET',
+            success: function (d) {
+
+                console.log('data');
+                console.log(d.data.result);
 
 
-                    if(data){
-                        // 修改category下季节结构,方便添加点击效果
-                        for (let key in sea) {
-                            if (curSeason == sea[key]) {
-                                ary.push({
-                                    index: key,
-                                    value: sea[key],
-                                    default: true,
-                                });
-                            } else {
-                                ary.push({
-                                    index: key,
-                                    value: sea[key]
-                                })
-                            }
+                let data = d.data.result ? d.data.result : '',
+                    sea = data.categorys,
+                    curSeason = data.category,
+                    ary = [];
+
+
+                if (data) {
+                    // 修改category下季节结构,方便添加点击效果
+                    for (let key in sea) {
+                        if (curSeason == sea[key]) {
+                            ary.push({
+                                index: key,
+                                value: sea[key],
+                                default: true,
+                            });
+                        } else {
+                            ary.push({
+                                index: key,
+                                value: sea[key]
+                            })
                         }
-
-                        // 对bandList下边的上新时间修改
-                        that.formatCurDate(data.bandList);
-
-                        // 保存修改后的数据
-                        that.setData({
-                            seasonList: ary,
-                            curSeason: curSeason,
-                            waveData: data.bandList,
-                            hasGetDate:true
-                        });
                     }
+
+                    // 对bandList下边的上新时间修改
+                    that.formatCurDate(data.bandList);
+
+                    // 保存修改后的数据
+                    that.setData({
+                        seasonList: ary,
+                        curSeason: curSeason,
+                        waveData: data.bandList,
+                        hasGetDate: true
+                    });
                 }
-            })
-        }else {
-            console.log('wuwuwu');
-           this.getListData();
-        }
+            }
+        })
 
     },
 
@@ -108,7 +107,7 @@ const option = util.extend(util, {
         this.setData({
             defaultFlag: false,
             selectIndex: e.currentTarget.dataset.index,
-            curSelectedSeason:category
+            curSelectedSeason: category
         });
 
         // 获取波段数据
@@ -148,7 +147,12 @@ const option = util.extend(util, {
     formatCurDate: function (d) {
         const that = this;
         d.forEach(function (item) {
-            item.waveTime = that.formatDate(item.saleTime)
+            if(item.saleTime!=null){
+                item.waveTime = that.formatDate(item.saleTime)
+            }else {
+                item.waveTime='';
+            }
+
         })
     },
 

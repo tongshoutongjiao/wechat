@@ -1,52 +1,40 @@
 <view class="container">
     <view class="listTitle">
-        <view class="imgWrapper">
+        <view class="imgWrap">
             <image src="{{userData.avatarUrl}}"/>
         </view>
         <view>
             <text>{{userData.nickName}}</text>
         </view>
     </view>
-
     <scroll-view scroll-y="true" class="dfList">
+
         <view class="dfSpec" wx:for="{{selectList}}">
 
-            <view class="dfTitle" data-folder-id="{{item.folderId}}" data-folder-name="{{item.folderName}}" bindtap="navigatorToPictureList" data-band-id="{{bandId}}">
+            <view class="dfTitle" data-folder-id="{{item.folderId}}" data-folder-name="{{item.folderName}}"  data-band-id="{{bandId}}">
                 <text>{{item.folderName}}</text>
-                <image/>
-            </view>
-            <view class="dfCon" >
-                <view class="leftImg">
-                    <view class="up imgWrapper">
-                        <image mode="aspectFill"  src="{{item.favorites[0].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
-                        <image mode="aspectFill"  src="{{item.favorites[1].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                </view>
-                <view class="middleImg">
-                    <view class="up imgWrapper" data-favourite-id="{{items.favouriteId}}">
-                        <image mode="aspectFill" src="{{item.favorites[2].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
-                        <image mode="aspectFill" src="{{item.favorites[3].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                </view>
-                <view class="rightImg">
-                    <view class="up imgWrapper" data-favourite-id="{{items.favouriteId}}">
-                        <image mode="aspectFill" src="{{item.favorites[4].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                    <view class=" down imgWrapper" data-favourite-id="{{items.favouriteId}}">
-                        <image mode="aspectFill" src="{{item.favorites[5].mediaUrl}}?x-oss-process=image/resize,w_350,limit_0"/>
-                    </view>
-                </view>
             </view>
 
 
 
+            <view class="imgList"  style="height:{{item.maxHeight}}rpx;" >
+
+                <view class="imgWrapper {{list.selected?'active':''}} " bindtap="addSelectIcon" data-select-index="{{item.index}}" data-index="{{list.index}}" data-selected="{{list.selected}}" wx:for="{{item.favorites}}" wx:key="folderId"  wx:for-item="list" style="top:{{list.top}}rpx;left:{{list.left}}rpx; height:{{list.boxHeight}}rpx;width:{{list.boxWidth}}rpx;">
+
+                    <image class="activeIcon"></image>
+
+                    <view class="{{list.selected?'layer':''}}"></view>
+
+                    <image class="picImage" src="{{list.mediaUrl}}?x-oss-process=image/resize,w_350,limit_0" mode="aspectFill">
+                    </image>
+                </view>
+            </view>
 
         </view>
     </scroll-view>
+    <view class="completeBtn" bindtap="dfUpload">
+        <button>完成</button>
+    </view>
 
 
 </view>

@@ -6,11 +6,20 @@
             <image/>
         </view>
     </block>
-    <view class="teamName barCode" bindtap="showBarCode" data-meeting-id="{{meetingId}}">
+    <view class="teamName barCode" bindtap="showBarCode" data-team-name="{{teamName}}" data-meeting-id="{{meetingId}}">
         <text>团队二维码</text>
         <image/>
         <image class="barCodeIcon"/>
     </view>
+
+    <!--测试-->
+     <!--<view class="teamName barCode" bindtap="returnToJoinTeam" data-team-name="{{teamName}}" data-scene="3%2C{{teamName}}" data-meeting-id="{{meetingId}}">
+         <text>团队二维码</text>
+         <image/>
+         <image class="barCodeIcon"/>
+     </view>-->
+    <!--测试-->
+
     <view>
         <view class="memberTitle">团队成员</view>
         <view class="memberList">
@@ -28,7 +37,8 @@
             <block wx:if="{{flag&&!onlyOne}}">
                 <view bindtap="navigatorToDeleteTeamMember" class=" plusIcon createImgWrapper"
                       data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}">
-                    <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/plusIcon.png"/>
+                    <image class="addImage"
+                           src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/plusIcon.png"/>
                 </view>
 
             </block>

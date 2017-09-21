@@ -120,7 +120,7 @@ const option = util.extend(util, {
         console.log(str);
     },
     createDate: function (e) {
-        for (let i = 2000; i <= date.getFullYear() + 1; i++) {
+        for (let i = 2000; i <= date.getFullYear() + 10; i++) {
             years.push(i)
         }
 

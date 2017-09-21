@@ -2,14 +2,8 @@
     padding:10rpx 0rpx;
 }
 
-
 /*副标题*/
 .container .titleWrapper{
-    position: absolute;
-    top: 0;
-    left: 0rpx;
-    right: 0rpx;
-    background:#fff;
     height: 94rpx;
     padding-right: 20rpx;
 }
@@ -32,7 +26,6 @@
 
 }
 .teamName{
-    margin-top: 94rpx;
     width: 100%;
     font-size: 14px;
     line-height: 88rpx;
@@ -163,6 +156,18 @@
     text-align:center;
     padding:20rpx 0;
     color:#666;
+}
+
+.secTit{
+    height:94rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    margin-top: 83rpx;
+}
+.secTit button{
+    background: #18a5e2;
+    font-size: 16px;
+    color: #fff;
 }
 
 

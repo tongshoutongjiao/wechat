@@ -1,7 +1,6 @@
 <view class="container">
     <view class="secTitle">
         <image class="setIcon" data-owner-name="{{ownerName}}"  data-meeting-id="{{meetingId}}"  data-team-name="{{teamName}}"  bindtap="setTeamName"/>
-
     </view>
     <view class="titleWrapper">
         <view class="rightWrapper"  bindtap="scrollSeasonR">
@@ -19,13 +18,35 @@
     </view>
 
     <scroll-view scroll-y="true" class="waveList" >
-        <block  >
+        <block >
             <view wx:for="{{waveData}}"  data-wave-id="{{item.bandId}}" wx:key="{{item.bandId}}"  class="wavePart">
                 <view class="titleCon" bindtap="navigatorToStyleList" data-band-id="{{item.bandId}}" data-sale-time="{{item.saleTime}}"  data-band-name="{{item.bandName}}" data-category="{{curSeason}}"  >
-                    <view class="waveCon">{{item.bandName}}</view>
-                    <view class="waveTime">{{item.waveTime}}</view>
-                    <image/>
+                    <view class="underLineBorder">
+                        <view class="waveCon">{{item.bandName}}</view>
+                        <view class="waveTime">{{item.waveTime}}</view>
+                        <image/>
+                    </view>
                 </view>
+
+                <!--测试-->
+                <!--<view class="titleCon" data-scene="105" bindtap="navigatorToStyleList" data-band-id="{{item.bandId}}" data-sale-time="{{item.saleTime}}"  data-band-name="{{item.bandName}}" data-category="{{curSeason}}"  >
+                    <view class="underLineBorder">
+                        <view class="waveCon">{{item.bandName}}</view>
+                        <view class="waveTime">{{item.waveTime}}</view>
+                        <image/>
+                    </view>
+                </view>-->
+
+                <!--测试-->
+
+
+
+
+
+
+
+
+
                 <scroll-view class="waveName" scroll-x="true" >
                     <view class="imgWrapper" wx:for="{{item.list}}" wx:key="designId"  wx:for-item="list">
                         <image mode="aspectFill"  src="{{list.url}}?x-oss-process=image/resize,w_350,limit_0"/>

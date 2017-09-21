@@ -1,7 +1,7 @@
 <view class="container">
-    <view class="teamName">
+    <!--<view class="teamName">
         <text>{{teamName}}</text>
-    </view>
+    </view>-->
     <view>
         <view class="memberTitle">团队成员</view>
         <view class="memberList">

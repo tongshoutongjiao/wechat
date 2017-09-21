@@ -15,29 +15,48 @@ const option = util.extend(util, {
         designList: []
     },
     onLoad: function (option) {
-        let bandId = option.bandId,
-            bandName = option.bandName,
-            saleTime = option.saleTime,
-            curSeason = option.category;
-        this.setData({
-            bandId: bandId,
-            bandName: bandName,
-            saleTime: saleTime,
-            curSeason: curSeason
+        const that = this;
+        let scene;
+        console.log(option);
+        app.onReadyPage(function () {
+            if (app.data.loadSuccess === false) {
+                that.setData({
+                    loadSuccess: false
+                });
+                return false;
+            } else {
+                that.setData({
+                    loadSuccess: true
+                });
+            }
         });
-        option.bandName ? wx.setNavigationBarTitle({
-            title: option.bandName,
-        }) : '';
-        this.getStyleList();
+
+        // 通过扫码进入加入款列表页面，先获取二维码中的scene值
+        option.scene ? scene = decodeURIComponent(option.scene) : '';
+        scene ? this.splitScene(scene, option) : this.setData({
+            bandId: option.bandId,
+            bandName: option.bandName,
+            saleTime: option.saleTime,
+            curSeason: option.category
+        });
+
+
+          option.bandName ? wx.setNavigationBarTitle({
+         title: option.bandName,
+         }) : '';
+
+        // 调用回调函数,获取当前页面的款信息
+        app.onReadyPage(this.getStyleList());
     },
+
     onShow: function () {
         this.getStyleList();
     },
+
     actionSheetTap: function () {
         const that = this;
 
         // 上传图片的函数，可以将其写在公共的方法utils文件下
-
         wx.chooseImage({
             count: 9,
             sizeType: ['original', 'compressed'],
@@ -53,6 +72,7 @@ const option = util.extend(util, {
             }
         });
     },
+
     clickSelectedOnline: function (e) {
         //     从DF精选集筛选照片
         wx.navigateTo({url: '/pages/DFList/DFList?' + util.jsonToParam(e.currentTarget.dataset)});
@@ -151,22 +171,45 @@ const option = util.extend(util, {
         });
 
     },
+
     navigatorToSpecStyle: function (e) {
         console.log(e);
         wx.navigateTo({url: '/pages/specStyle/specStyle?' + util.jsonToParam(e.currentTarget.dataset)});
     },
+
     getStyleList: function () {
         let bandId = this.data.bandId,
             that = this;
+
+
+
         this.request({
             url: `${config.domain}/app/designs/${bandId}`,
             method: 'GET',
             success: function (d) {
-                let data = d.data.result ? d.data.result : [];
+                console.log('data');
+                console.log(d);
+
+                let data = d.data.result ? d.data.result : null;
+                console.log(data);
+                that.setData({
+                    specStyleData: data,
+                });
+                if(data.length>0){
                     that.setData({
-                        specStyleData: data,
                         hasStyleDate: true,
+                        bandName: data[0].bandName,
+                        saleTime: data[0].saleTime,
+                        curSeason: data[0].category
                     });
+                    wx.setNavigationBarTitle({
+                        title: data[0].bandName,
+                    })
+                }else {
+                    that.setData({
+                        hasStyleDate: false,
+                    });
+                }
             }
         });
     },
@@ -204,7 +247,25 @@ const option = util.extend(util, {
     // 上传成功后，执行回调函数，重新获取当前列表的数据
     reloadCurPage: function () {
         this.getStyleList();
+    },
+
+    //以逗号分隔截取字符串
+    splitScene: function (scene, option) {
+        let sceneArray;
+        if (scene.indexOf(',') != -1) {
+            sceneArray = scene.split(',');
+            this.setData({
+                bandId: sceneArray[0],
+                bandName: sceneArray[1]
+            });
+        } else {
+            this.setData({
+                bandId: scene
+            });
+        }
     }
+
+
 });
 Page(option);
 

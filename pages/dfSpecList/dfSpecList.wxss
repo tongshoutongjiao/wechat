@@ -42,7 +42,6 @@
     opacity:0.6;
 }
 
-
 .imgWrapper{
     position: absolute;
     display: inline-block;

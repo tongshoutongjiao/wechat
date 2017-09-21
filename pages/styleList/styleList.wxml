@@ -9,7 +9,7 @@
             </view>
             <view class="chooseLoadWays">
                 <view class="DCIM" bindtap="actionSheetTap" >照片</view>
-                <view class="onLine" bindtap="clickSelectedOnline">DF精选集</view>
+                <view class="onLine" bindtap="clickSelectedOnline" data-band-id="{{bandId}}" >DF精选集</view>
                 <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
                     <block wx:for-items="{{actionSheetItems}}">
                         <action-sheet-item bindtap="loadBy{{item.type}}">{{item.txt}}</action-sheet-item>
@@ -24,10 +24,26 @@
             <view class="imgWrapper" wx:for="{{specStyleData}}"  bindtap="navigatorToSpecStyle" data-designer-id="{{item.designId}}"  data-sort-id="{{item.sortId}}"  >
                 <image src="{{item.url}}" />
             </view>
+
+            <!--测试-->
+          <!--  <view class="imgWrapper"  wx:for="{{specStyleData}}"  bindtap="navigatorToSpecStyle" data-scene="271" data-designer-id="{{item.designId}}"  data-sort-id="{{item.sortId}}"  >
+                <image src="{{item.url}}" />
+            </view>
+
+-->
+            <!--测试-->
+
+
+
+
+
+
+
+
         </scroll-view>
         <view class="chooseLoadWays">
             <view class="DCIM" bindtap="actionSheetTap" >照片</view>
-            <view class="onLine" bindtap="clickSelectedOnline" data-band-id="{{bandId}}" >DF精选集</view>
+            <view class="onLine"  data-band-id="{{bandId}}" bindtap="clickSelectedOnline" >DF精选集</view>
         </view>
 
     </block>

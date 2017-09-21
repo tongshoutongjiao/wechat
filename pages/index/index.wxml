@@ -1,20 +1,24 @@
-<view class="container">
+<scroll-view  class="container">
+    <view class="title" style="width: 100%;height: 10rpx;"></view>
     <view class="partLogo">
         <view class="imageWrapper">
             <image class="logoImg" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/bigIcon.png"></image>
         </view>
     </view>
-
-    <scroll-view class="teamWrapper" scroll-y="true">
-        <view wx:for="{{teamList}}" wx:key="" class="teamName teamFirst" data-owner-Name="{{item.ownerName}}" bindtap="navigatorToTeam" data-team-name="{{item.meetingName}}"  data-meeting-id="{{item.meetingId}}">
-            <view  >
-                <image mode="aspectFill" class="teamImageIcon" src="{{item.teamIcon}}?x-oss-process=image/resize,w_350,limit_0"></image>
-                <view class="teamImageCon teamImgText" >
-                    <text>{{item.meetingName}}</text>
+    <view>
+        <scroll-view class="teamWrapper" scroll-y="true">
+            <view wx:for="{{teamList}}" wx:key="" class="teamName teamFirst" data-owner-Name="{{item.ownerName}}"
+                  bindtap="navigatorToTeam" data-team-name="{{item.meetingName}}" data-meeting-id="{{item.meetingId}}">
+                <view>
+                    <image mode="aspectFill" class="teamImageIcon"
+                           src="{{item.teamIcon}}?x-oss-process=image/resize,w_350,limit_0"></image>
+                    <view class="teamImageCon teamImgText">
+                        <text>{{item.meetingName}}</text>
+                    </view>
                 </view>
             </view>
-        </view>
-    </scroll-view>
+        </scroll-view>
+    </view>
 
     <view class="bottomFix" bindtap="navigatorCreateTeam">
         <view class="createIconWrapper">
@@ -24,4 +28,4 @@
             <text>创建团队</text>
         </view>
     </view>
-</view>
+</scroll-view>

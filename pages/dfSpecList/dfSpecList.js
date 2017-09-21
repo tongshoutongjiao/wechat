@@ -44,6 +44,8 @@ const option = util.extend(util, {
                     item.index = index;
                 });
                 that.waterFlow(imgData.favorites);
+                console.log('imgData.favorites');
+                console.log(imgData.favorites);
                 that.setData({
                     imgList: imgData.favorites
                 });
@@ -84,6 +86,9 @@ const option = util.extend(util, {
             data = this.data.imgList[index];
 
         data.selected = !data.selected;
+        console.log('lalala');
+        console.log(['imgList[' + index + ']']);
+        console.log([`imgList[${index }]`]);
         this.setData({
             ['imgList[' + index + ']']: data
         });

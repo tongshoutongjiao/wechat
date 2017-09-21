@@ -1,3 +1,10 @@
+page{
+    color:#1D1D1D;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    overflow:auto;
+    margin-top: 0;
+}
 .container {
     height: 100%;
     width: 100%;
@@ -39,15 +46,14 @@
 
 /*删除样式*/
 action-sheet-item{
-    font-size:14px ;
+    font-size:16px ;
     line-height:56rpx ;
     background: #fff;
-    color: #666;
 }
 action-sheet-cancel{
-    font-size: 14px;
+    font-size: 16px;
     line-height:56rpx;
-    color: #666;
+
 }
 .delete {
     font-size: 12px;
@@ -61,7 +67,7 @@ action-sheet-cancel{
 .chooseDate{
     box-sizing: border-box;
     width: 100%;
-    margin-top: 50rpx;
+    margin-top: 83rpx;
     border-top:1px solid #dfdfdf;
     border-bottom:1px solid #dfdfdf;
 
@@ -75,7 +81,6 @@ action-sheet-cancel{
     line-height: 52rpx;
     font-size: 14px;
     text-align: center;
-
 }
 
 /*款页*/
@@ -101,6 +106,61 @@ action-sheet-cancel{
     letter-spacing: 2px;
     margin-top: 17rpx;
 }
+
+/*!*精选集列表页样式*!
+!*图片列表区域*!
+.container .content{
+    position: absolute;
+    top: 114rpx;
+    bottom: 0;
+    overflow: hidden;
+    left:0;
+    right: 0;
+}
+
+!* 遮罩层*!
+
+.layer{
+    position:absolute;
+    width:92%;
+    height:94%;
+    background:gray;
+    padding:20rpx;
+    box-sizing:border-box;
+    opacity:0.6;
+}
+
+
+.imgWrapper{
+    position: absolute;
+    display: inline-block;
+    border-radius: 6rpx;
+    padding:15rpx ;
+    box-sizing: border-box;
+}
+.imgWrapper .picImage{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+}
+.imgWrapper .activeIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width:66rpx ;
+    height: 66rpx;
+    border-radius: 50%;
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete1.png");
+    background-size: cover;
+}
+.content .active .activeIcon{
+    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/selected.png");
+    z-index: 100;
+}*/
 
 
 

@@ -9,22 +9,25 @@ const app = getApp();
 const option = util.extend(util, {
     data: {},
     onLoad: function (option) {
+        console.log(option);
 
         wx.setNavigationBarTitle({
             title: '团队二维码',
         });
         this.setData({
-            meetingId:option.meetingId
+            meetingId:option.meetingId,
+            teamName:option.teamName
         });
         this.getQRImg();
     },
     getQRImg:function () {
         const that=this;
         this.request({
-            url:`${config.domain}/app/meeting/qr-code`,
+            url:`${config.domain}/app/meetings/qr-code`,
             method:'GET',
             data:{
-                meetingId:that.data.meetingId
+                meetingId:that.data.meetingId,
+                teamName:that.data.teamName
             },
             success:function (d) {
                 if(d.data.result){

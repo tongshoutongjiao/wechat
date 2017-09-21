@@ -1,20 +1,17 @@
+
 .container{
-    background-image: url(" http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/indexBg.png");
-    background-size: cover;
     position:absolute;
     top:0;
     bottom:0;
     width:100%;
     height: 100%;
-
+    padding: 0;
 }
 .partLogo{
     padding-top:70rpx ;
     padding-bottom: 66rpx;
     padding-left: 200rpx;
-
     width: 100%;
-
     height:484rpx;
     box-sizing: border-box;
 }
@@ -39,11 +36,12 @@
     width: 100%;
 }
 .teamWrapper{
-    width:100%;
     position:absolute;
     top:484rpx;
     bottom:96rpx;
     left:24rpx;
+    right: 24rpx;
+    width: 97%;
 }
 .teamWrapper .teamName{
     box-sizing:border-box;
@@ -54,9 +52,17 @@
     border-bottom:1px solid #DFDFDF;
     margin-right:50rpx;
 }
+.teamWrapper .teamName view{
+    white-space: nowrap;
+}
+
 .teamWrapper .teamFirst{
     border-top: 0px;
 }
+
+
+
+
 .teamWrapper .teamName text{
     line-height: 100rpx;
     font-size: 12px;
@@ -94,7 +100,7 @@
     color: #fff;
     background:#1D2331;
     width:100%;
-    letter-spacing: 12px;
+    letter-spacing: 3px;
     text-align:center;
     left:0;
 }
@@ -113,4 +119,5 @@
 }
 .bottomFix .imgWrapper{
     display: inline-block;
+    font-size: 16px;
 }
