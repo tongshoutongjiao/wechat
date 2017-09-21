@@ -158,12 +158,6 @@ const option = util.extend(util, {
                     that.setData({
                         designList: styleData
                     });
-                    wx.showToast({
-                        title: '小程序图片上传',
-                        icon: 'loading',
-                        duration: 2000
-                    });
-
                     // 上传款图片
                     that.getDesign(styleData)
                 }

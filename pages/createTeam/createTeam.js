@@ -60,11 +60,11 @@ const option = util.extend(util, {
             }
         })
     },
-
+    
     // 返回首页
     returnIndex:function () {
-        wx.navigateBack({
-            delta: 1
+        wx.reLaunch({
+            url: '/pages/index/index'
         })
     }
 

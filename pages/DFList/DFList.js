@@ -112,16 +112,17 @@ const option = util.extend(util, {
             // 初始化当前精选集图片的列表样式
             item.index=index;
 
+
             item.columns = [{
                 index: 0,
                 left: 0,
                 top: 0,
-                width: setWidth,
+                width: 350,
             }, {
                 index: 1,
-                left: setWidth,
+                left: 350,
                 top: 0,
-                width: setWidth
+                width: 350
             }];
             that.waterFlow(item, item.favorites);
         });
