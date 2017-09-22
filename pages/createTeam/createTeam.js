@@ -60,7 +60,7 @@ const option = util.extend(util, {
             }
         })
     },
-    
+
     // 返回首页
     returnIndex:function () {
         wx.reLaunch({

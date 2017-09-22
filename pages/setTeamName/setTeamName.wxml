@@ -13,7 +13,7 @@
     </view>
 
     <!--测试-->
-     <!--<view class="teamName barCode" bindtap="returnToJoinTeam" data-team-name="{{teamName}}" data-scene="3%2C{{teamName}}" data-meeting-id="{{meetingId}}">
+     <!--<view class="teamName barCode" bindtap="returnToJoinTeam" data-team-name="{{teamName}}" data-scene="3" data-meeting-id="{{meetingId}}">
          <text>团队二维码</text>
          <image/>
          <image class="barCodeIcon"/>

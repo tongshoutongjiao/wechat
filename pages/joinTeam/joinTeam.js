@@ -25,6 +25,10 @@ const option = util.extend(util, {
             }
         });
 
+        // 根据团队ID获取团队名
+        // 思路：判断option中是否有scene的值?
+        // 1 如果有，则根据meetingId 调用接口，获取团队名称,
+
         // 通过扫码进入加入团队页面，先获取二维码中的scene值
         option.scene ? scene = decodeURIComponent(option.scene) : '';
 
@@ -33,6 +37,7 @@ const option = util.extend(util, {
             teamName: option.teamName,
             meetingId: option.meetingId
         });
+
         wx.setNavigationBarTitle({
             title: '邀请好友',
         });
@@ -49,9 +54,6 @@ const option = util.extend(util, {
             url: `${config.domain}/app/meetings/users/${meetingId}`,
             method: 'GET',
             success: function (d) {
-                console.log('dataResponse');
-                console.log(d);
-
                 let data = d.data.result;
                 that.setData({
                     memberList: data
@@ -119,18 +121,32 @@ const option = util.extend(util, {
 
     //以逗号分隔截取字符串
     splitScene: function (scene) {
-        let sceneArray;
-        if (scene.indexOf(',') != -1) {
-            sceneArray = scene.split(',');
-            this.setData({
-                teamName: sceneArray[1],
-                meetingId: sceneArray[0]
-            });
-        } else {
+        const that=this;
             this.setData({
                 meetingId: scene
             });
-        }
+            this.getTeamName(scene);
+    },
+//    通过团队ID名来获取团队名
+    getTeamName:function (IdName) {
+        const that=this;
+        this.request({
+            url: `${config.domain}/app/meetings/get-name`,
+            method: 'GET',
+            data:{
+                id:IdName
+            },
+            success: function (d) {
+                let name;
+                if(d.data.result){
+                    name=d.data.result.name;
+                }
+                that.setData({
+                    teamName:name
+                });
+            }
+        })
+
     }
 
 });
