@@ -63,8 +63,6 @@ const option = util.extend(util, {
                     sea = data.categorys,
                     curSeason = data.category,
                     ary = [];
-
-
                 if (data) {
                     // 修改category下季节结构,方便添加点击效果
                     for (let key in sea) {
@@ -176,7 +174,13 @@ const option = util.extend(util, {
                 left: this.data.left
             });
         }
+    },
+
+   // 跳转到specStyle页面
+    turnToSpecStyle:function (e) {
+        wx.navigateTo({url: '/pages/specStyle/specStyle?' + util.jsonToParam(e.currentTarget.dataset)});
     }
+
 });
 
 Page(option);

@@ -5,11 +5,11 @@
     </view>
 
     <view class="mainImg" data-id="{{parStyle.id}}" data-index="{{parStyle.index}}" data-isMain="{{parStyle.isMain?parStyle.isMain:false}}">
-        <image  src="{{parStyle.url}}"/>
+        <image  src="{{parStyle.url}}?x-oss-process=image/resize,m_fill,h_456,w_365" bindtap="largerImage" data-url="{{parStyle.url}}"/>
     </view>
     <scroll-view scroll-X="true" >
         <view wx:for="{{childStyle}}" wx:key="{{item.id}}" class="additionImg"bindtap="switchDetailPic" data-isMain="{{item.isMain?item.isMain:false}}" data-index="{{item.index}}">
-            <image mode="aspectFill" data-id="{{item.id}}" mode="aspectFill" src="{{item.url}}?x-oss-process=image/resize,m_fill,h_456,w_365"/>
+            <image  data-id="{{item.id}}" mode="aspectFill" src="{{item.url}}?x-oss-process=image/resize,m_fill,h_456,w_365"/>
         </view>
         <view class="addIcon" bindtap="uploadDetailPic">
             <view class="imgCon"></view>

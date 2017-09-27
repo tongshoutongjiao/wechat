@@ -266,7 +266,7 @@ const option = util.extend(util, {
         })
     },
 
-    //以逗号分隔截取字符串
+    // 以逗号分隔截取字符串
     splitScene: function (scene,option) {
         let sceneArray;
         if (scene.indexOf(',') != -1) {
@@ -279,7 +279,14 @@ const option = util.extend(util, {
                 designId: scene
             });
         }
-    }
+    },
+
+   // 点击查看大图
+    largerImage: function (e) {
+        wx.previewImage({
+            urls: [e.currentTarget.dataset.url]
+        });
+    },
 
 
 });

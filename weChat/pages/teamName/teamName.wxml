@@ -46,9 +46,8 @@
 
 
 
-
                 <scroll-view class="waveName" scroll-x="true" >
-                    <view class="imgWrapper" wx:for="{{item.list}}" wx:key="designId"  wx:for-item="list">
+                    <view class="imgWrapper" wx:for="{{item.list}}" data-designer-id="{{list.designId}}" bindtap="turnToSpecStyle" wx:key="designId"  wx:for-item="list">
                         <image mode="aspectFill"  src="{{list.url}}?x-oss-process=image/resize,w_350,limit_0"/>
                     </view>
                 </scroll-view>
