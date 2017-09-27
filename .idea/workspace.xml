@@ -2,12 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c051a1a5-e877-4fdc-abc6-3ac657fdad72" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ewe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/DFList/DFList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/DFList/DFList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/DFList/DFList.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/DFList/DFList.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/QRcode/QRcode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/QRcode/QRcode.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/QRcode/QRcode.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/QRcode/QRcode.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createTeam/createTeam.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createTeam/createTeam.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createTeam/createTeam.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createTeam/createTeam.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createWave/createWave.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createWave/createWave.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createWave/createWave.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/createWave/createWave.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/deleteTeamMember/deleteTeamMember.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/deleteTeamMember/deleteTeamMember.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/deleteTeamMember/deleteTeamMember.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/deleteTeamMember/deleteTeamMember.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/dfSpecList/dfSpecList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/dfSpecList/dfSpecList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/dfSpecList/dfSpecList.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/dfSpecList/dfSpecList.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/fixTeamName/fixTeamName.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/fixTeamName/fixTeamName.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/fixTeamName/fixTeamName.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/fixTeamName/fixTeamName.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index/index.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/inviteFriend/inviteFriend.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/inviteFriend/inviteFriend.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/inviteFriend/inviteFriend.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/inviteFriend/inviteFriend.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/joinTeam/joinTeam.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/joinTeam/joinTeam.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/joinTeam/joinTeam.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/joinTeam/joinTeam.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setTeamName/setTeamName.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setTeamName/setTeamName.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setTeamName/setTeamName.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setTeamName/setTeamName.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setWaveDate/setWaveDate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setWaveDate/setWaveDate.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setWaveDate/setWaveDate.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/setWaveDate/setWaveDate.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/styleList/styleList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/styleList/styleList.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/styleList/styleList.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/styleList/styleList.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/teamName/teamName.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/teamName/teamName.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/teamName/teamName.wxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/teamName/teamName.wxss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/readyEvent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/util.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.js" afterPath="$PROJECT_DIR$/pages/specStyle/specStyle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/specStyle/specStyle.wxml" afterPath="$PROJECT_DIR$/pages/specStyle/specStyle.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/styleList/styleList.wxml" afterPath="$PROJECT_DIR$/pages/styleList/styleList.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/teamName/teamName.js" afterPath="$PROJECT_DIR$/pages/teamName/teamName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/teamName/teamName.wxml" afterPath="$PROJECT_DIR$/pages/teamName/teamName.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,121 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="joinTeam.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/joinTeam/joinTeam.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2289">
-              <caret line="127" column="19" lean-forward="false" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-              <folding>
-                <element signature="e#2870#3452#0" expanded="false" />
-                <element signature="e#3706#4178#0" expanded="false" />
-                <element signature="e#3754#4170#0" expanded="false" />
-                <element signature="e#3936#4160#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joinTeam.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/joinTeam/joinTeam.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setTeamName.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/setTeamName/setTeamName.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamName.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/teamName/teamName.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding>
-                <element signature="e#4609#4861#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styleList.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/styleList/styleList.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specStyle.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/specStyle/specStyle.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.wxss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weChat/app.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specStyle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/specStyle/specStyle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1617">
-              <caret line="286" column="47" lean-forward="false" selection-start-line="286" selection-start-column="47" selection-end-line="286" selection-end-column="47" />
-              <folding>
-                <element signature="e#1188#2094#0" expanded="false" />
-                <element signature="e#2129#2230#0" expanded="false" />
-                <element signature="e#2271#2372#0" expanded="false" />
-                <element signature="e#2434#3655#0" expanded="false" />
-                <element signature="e#3721#4318#0" expanded="false" />
-                <element signature="e#4385#4828#0" expanded="false" />
-                <element signature="e#4879#5625#0" expanded="false" />
-                <element signature="e#5705#6853#0" expanded="false" />
-                <element signature="e#6915#7442#0" expanded="false" />
-                <element signature="e#7496#7532#0" expanded="false" />
-                <element signature="e#7591#7839#0" expanded="false" />
-                <element signature="e#7900#8199#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamName.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/teamName/teamName.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -390,23 +342,23 @@
       <workItem from="1506334034637" duration="1121000" />
       <workItem from="1506391348999" duration="53000" />
       <workItem from="1506408613759" duration="2313000" />
-      <workItem from="1506482421606" duration="26000" />
+      <workItem from="1506482421606" duration="175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105562000" />
+    <option name="totallyTimeSpent" value="105711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-231" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18479408" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18479408" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12148594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56626505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41148326" sideWeight="0.5063694" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -717,12 +669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2289">
           <caret line="127" column="19" lean-forward="false" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-          <folding>
-            <element signature="e#2870#3452#0" expanded="false" />
-            <element signature="e#3706#4178#0" expanded="false" />
-            <element signature="e#3754#4170#0" expanded="false" />
-            <element signature="e#3936#4160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -762,9 +709,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1764">
           <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding>
-            <element signature="e#4609#4861#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,20 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1617">
           <caret line="286" column="47" lean-forward="false" selection-start-line="286" selection-start-column="47" selection-end-line="286" selection-end-column="47" />
-          <folding>
-            <element signature="e#1188#2094#0" expanded="false" />
-            <element signature="e#2129#2230#0" expanded="false" />
-            <element signature="e#2271#2372#0" expanded="false" />
-            <element signature="e#2434#3655#0" expanded="false" />
-            <element signature="e#3721#4318#0" expanded="false" />
-            <element signature="e#4385#4828#0" expanded="false" />
-            <element signature="e#4879#5625#0" expanded="false" />
-            <element signature="e#5705#6853#0" expanded="false" />
-            <element signature="e#6915#7442#0" expanded="false" />
-            <element signature="e#7496#7532#0" expanded="false" />
-            <element signature="e#7591#7839#0" expanded="false" />
-            <element signature="e#7900#8199#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,8 +739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weChat/app.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>

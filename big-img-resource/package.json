@@ -1,0 +1,17 @@
+{
+  "name": "deepfashion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "ali-oss": "^4.4.4",
+    "co": "^4.6.0",
+    "glob": "^7.1.0"
+  },
+  "scripts": {
+    "start": "fis3 release -wL",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
