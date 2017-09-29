@@ -38,7 +38,7 @@ const option = util.extend(util, {
           designId:option.designerId
         });
 
-        app.onReadyPage(this.getStyleInfo());
+        app.onReadyPage(this.getStyleInfo.bind(this));
     },
     // 调用接口获取当前主图和配图信息
     getStyleInfo: function () {

@@ -14,7 +14,7 @@
         </view>
     </view>
     <view class="memberBtn" bindtap="joinNewTeam">
-        <image class="memberIcon" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/newTeamer.png"/>
+        <image class="memberIcon" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/newTeamer.png"/>
         <button>{{inviteText}}</button>
     </view>
 </view>

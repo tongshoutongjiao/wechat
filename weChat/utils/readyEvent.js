@@ -8,7 +8,6 @@ module.exports = {
 
     // 小程序系统已获取 sessionStr
     onReadyPage: function (callback) {
-
         if (typeof callback !== 'function') return;
         if (this.isReady) {
             if (callback() === false) {

@@ -2,7 +2,7 @@
     <view class="title" style="width: 100%;height: 10rpx;"></view>
     <view class="partLogo">
         <view class="imageWrapper">
-            <image class="logoImg" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/bigIcon.png"></image>
+            <image class="logoImg" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/bigIcon.png"></image>
         </view>
     </view>
     <view>
@@ -22,7 +22,7 @@
 
     <view class="bottomFix" bindtap="navigatorCreateTeam">
         <view class="createIconWrapper">
-            <image class="createIcon" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/teamMates.png"/>
+            <image class="createIcon" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/teamMates.png"/>
         </view>
         <view class="imgWrapper">
             <text>创建团队</text>

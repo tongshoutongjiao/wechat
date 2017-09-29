@@ -12,7 +12,7 @@ page{
     bottom: 0;
     left:0;
     padding:10rpx 25rpx;
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/indexBg.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/indexBg.png");
     background-size: cover;
     box-sizing: border-box;
 }
@@ -27,7 +27,7 @@ page{
     display:inline-block;
     width:26rpx;
     height:26rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/closeIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/closeIcon.png");
     background-size:cover;
     margin-top:34rpx;
     margin-left:18rpx;
@@ -38,7 +38,7 @@ page{
     display:inline-block;
     width:45rpx;
     height:45rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/setIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/setIcon.png");
     background-size:cover;
     margin-top:28rpx;
     margin-right:63rpx;
@@ -53,7 +53,6 @@ action-sheet-item{
 action-sheet-cancel{
     font-size: 16px;
     line-height:56rpx;
-
 }
 .delete {
     font-size: 12px;
@@ -107,60 +106,6 @@ action-sheet-cancel{
     margin-top: 17rpx;
 }
 
-/*!*精选集列表页样式*!
-!*图片列表区域*!
-.container .content{
-    position: absolute;
-    top: 114rpx;
-    bottom: 0;
-    overflow: hidden;
-    left:0;
-    right: 0;
-}
-
-!* 遮罩层*!
-
-.layer{
-    position:absolute;
-    width:92%;
-    height:94%;
-    background:gray;
-    padding:20rpx;
-    box-sizing:border-box;
-    opacity:0.6;
-}
-
-
-.imgWrapper{
-    position: absolute;
-    display: inline-block;
-    border-radius: 6rpx;
-    padding:15rpx ;
-    box-sizing: border-box;
-}
-.imgWrapper .picImage{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 8rpx;
-}
-.imgWrapper .activeIcon{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width:66rpx ;
-    height: 66rpx;
-    border-radius: 50%;
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete1.png");
-    background-size: cover;
-}
-.content .active .activeIcon{
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/selected.png");
-    z-index: 100;
-}*/
 
 
 

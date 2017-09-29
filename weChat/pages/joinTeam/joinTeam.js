@@ -28,7 +28,6 @@ const option = util.extend(util, {
         // 根据团队ID获取团队名
         // 思路：判断option中是否有scene的值?
         // 1 如果有，则根据meetingId 调用接口，获取团队名称,
-
         // 通过扫码进入加入团队页面，先获取二维码中的scene值
         option.scene ? scene = decodeURIComponent(option.scene) : '';
 
@@ -128,7 +127,7 @@ const option = util.extend(util, {
             this.getTeamName(scene);
     },
 //    通过团队ID名来获取团队名
-    getTeamName:function (IdName) {
+     getTeamName:function (IdName) {
         const that=this;
         this.request({
             url: `${config.domain}/app/meetings/get-name`,

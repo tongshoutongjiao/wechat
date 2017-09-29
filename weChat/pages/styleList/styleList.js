@@ -30,6 +30,8 @@ const option = util.extend(util, {
                 });
             }
         });
+        // 调用回调函数,获取当前页面的款信息
+        app.onReadyPage(this.getStyleList.bind(this));
 
         // 通过扫码进入加入款列表页面，先获取二维码中的scene值
         option.scene ? scene = decodeURIComponent(option.scene) : '';
@@ -40,17 +42,15 @@ const option = util.extend(util, {
             curSeason: option.category
         });
 
-
-          option.bandName ? wx.setNavigationBarTitle({
-         title: option.bandName,
-         }) : '';
-
-        // 调用回调函数,获取当前页面的款信息
-        app.onReadyPage(this.getStyleList());
+        option.bandName ? wx.setNavigationBarTitle({
+            title: option.bandName,
+        }) : '';
     },
 
     onShow: function () {
-        this.getStyleList();
+
+        // 调用回调函数,获取当前页面的款信息
+       this.getStyleList();
     },
 
     actionSheetTap: function () {
@@ -175,8 +175,6 @@ const option = util.extend(util, {
         let bandId = this.data.bandId,
             that = this;
 
-
-
         this.request({
             url: `${config.domain}/app/designs/${bandId}`,
             method: 'GET',
@@ -258,7 +256,6 @@ const option = util.extend(util, {
             });
         }
     }
-
 
 });
 Page(option);

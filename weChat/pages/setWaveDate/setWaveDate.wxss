@@ -25,7 +25,7 @@
     display:inline-block;
     width:26rpx;
     height:26rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/closeIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/closeIcon.png");
     background-size:cover;
     margin-top:34rpx;
     margin-left:18rpx;
@@ -64,7 +64,7 @@
 .inviteFriend image{
     width: 10rpx;
     height: 18rpx;
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/enterIconImg.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/enterIconImg.png");
     background-size: cover;
     float: right;
     margin-top: 5rpx;

@@ -11,23 +11,22 @@ const option = util.extend(util, {
         userInfo: app.data.userInfo,
     },
     onLoad: function () {
-
-        // 调用发送ajax请求，获取首页的团队列表数据
-        console.log(this);
         const that = this;
-        let screenHeight;
-        screenHeight=this.app.data.system.screenHeight;
-        console.log(screenHeight);
-        app.onReadyPage(this.getTeamDate.bind(this));
-        this.setData({
-            deviceHeight:screenHeight
-        });
-        wx.getUserInfo({
-            success: function (resUser) {
-                console.log(resUser);
+        app.onReadyPage(function () {
+            if (app.data.loadSuccess === false) {
+                that.setData({
+                    loadSuccess: false
+                });
+                return false;
+            } else {
+                that.setData({
+                    loadSuccess: true
+                });
             }
         });
-        // this.splitScene(scene)
+
+        // 调用发送ajax请求，获取首页的团队列表数据
+        app.onReadyPage(this.getTeamDate.bind(this));
     },
     onShow: function () {
         this.getTeamDate();
@@ -63,7 +62,7 @@ const option = util.extend(util, {
     addTeamIcon: function (data) {
         let iconList = ['green.png', 'yellow.png', 'lightBlue.png'];
         data.forEach(function (item, index) {
-            let suffixIcon = 'http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/';
+            let suffixIcon = 'http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/';
             item.teamIcon = `${suffixIcon}${iconList[index % 3]}`;
         });
     },
@@ -71,6 +70,7 @@ const option = util.extend(util, {
     // 首页转发功能
     onShareAppMessage: function (res) {
         if (res.from === 'button') {
+
             // 来自页面内转发按钮
             console.log(res.target)
         }
@@ -84,23 +84,7 @@ const option = util.extend(util, {
                 // 转发失败
             }
         }
-    },
-
-    //以逗号分隔截取字符串
-    splitScene: function (scene) {
-        let sceneArray;
-        if (scene.indexOf(',') !=-1) {
-            sceneArray = scene.split(',');
-        } else {
-            sceneArray = scene;
-        }
-        console.log(sceneArray);
-    },
-    myTouchMove:function (e) {
-        console.log(e);
-        e.preventDefault();
     }
-
 
 });
 Page(option);

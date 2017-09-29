@@ -56,7 +56,7 @@
 
         <view class="createWave">
             <view class="createImgWrapper" bindtap="createWaveName" data-meeting-id="{{meetingId}}" data-category="{{curSeason}}"  >
-                <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/addImg.png"/>
+                <image class="addImage" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/addImg.png"/>
             </view>
             <view>
                 <text>创建波段</text>

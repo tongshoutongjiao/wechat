@@ -1,5 +1,4 @@
 const config = require('./config');
-
 const option = extend(require('./utils/readyEvent'), {
     data: {
         // 用户是否授权，默认为false
@@ -18,6 +17,7 @@ const option = extend(require('./utils/readyEvent'), {
         } catch (e) {
             console.log(e)
         }
+        console.log(this);
     },
 
     /*
@@ -30,12 +30,16 @@ const option = extend(require('./utils/readyEvent'), {
         wx.login({
             success: function (res) {
                 if (res.code) {
+                    console.log(res);
                     //发起网络请求
-                    console.log(res.code);
+                    console.log(res);
                     that.getUserInfo(res.code);
                 } else {
-                    console.log('获取用户登录态失败！' + res.errMsg)
+                    that.loadFail();
                 }
+            },
+            fail: function (err) {
+                that.loadFail('微信登陆', err.errMsg);
             }
         });
     },
@@ -56,9 +60,8 @@ const option = extend(require('./utils/readyEvent'), {
                 encryptedData: encryptedData
             },
             success: function (response) {
-                console.log(response);
                 let res = response.data;
-                if(res){
+                if (res) {
                     // token
                     that.data.sessionStr = res.result;
                     that.__userLoginSuccess();
@@ -71,32 +74,39 @@ const option = extend(require('./utils/readyEvent'), {
         });
 
     },
+
+// 失败回调
     loadFail: function (errMessage = '登陆失败') {
         this.data.loadSuccess = false;
         wx.showToast({
             title: errMessage,
             icon: 'loading'
         });
+        this.triggerReady();
     },
 
-    // 获取到sessionStr之后的登录状态
+// 获取到sessionStr之后的登录状态
     __userLoginSuccess: function () {
         const that = this;
         that.data.isLogining = that.data.loadSuccess = void(0);
         that.triggerReady();
     },
 
-//  获取用户信息
+// 获取用户信息
     getUserInfo: function (code) {
         let that = this,
             userData;
         wx.getUserInfo({
+            withCredentials: true,
             success: function (resUser) {
+                // 保存用户信息，同时将获取到的用户信息发送给后台
+                console.log('resUser');
                 console.log(resUser);
-                console.log(JSON.parse(resUser.rawData).nickName);
                 that.data.userInfo = resUser.userInfo;
                 that.getSessionStr(code, resUser);
                 userData = resUser.userInfo;
+            }, fail: function () {
+                that.loadFail();
             }
         });
     },
@@ -113,7 +123,6 @@ const option = extend(require('./utils/readyEvent'), {
             obj.success = function (response) {
                 // console.log(response.data.status.code);
                 if (response.data.status.code == '1003') {
-
                     that.data.isLogining = true;
                 } else {
                     if (config.debug) {

@@ -26,8 +26,7 @@ const option = util.extend(util, {
             url:`${config.domain}/app/meetings/qr-code`,
             method:'GET',
             data:{
-                meetingId:that.data.meetingId,
-                teamName:that.data.teamName
+                meetingId:that.data.meetingId
             },
             success:function (d) {
                 if(d.data.result){
@@ -36,6 +35,7 @@ const option = util.extend(util, {
                         qrUrl:qrUrl
                     })
                 }else{
+
                     return;
                 }
 

@@ -17,7 +17,7 @@
     margin-top:24rpx;
     width:30rpx;
     height:30rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/forWord.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/forWord.png");
     background-size:cover;
     float:right;
 }
@@ -25,7 +25,7 @@
     display:inline-block;
     width:30rpx;
     height:30rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/errCodeIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/errCodeIcon.png");
     margin-right: 30rpx;
 }
 

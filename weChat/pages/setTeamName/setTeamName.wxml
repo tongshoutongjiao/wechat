@@ -32,13 +32,13 @@
 
             <view class=" addIcon createImgWrapper" data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}"
                   bindtap="navigatorToInviteFriend">
-                <image class="addImage" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/addImg.png"/>
+                <image class="addImage" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/addImg.png"/>
             </view>
             <block wx:if="{{flag&&!onlyOne}}">
                 <view bindtap="navigatorToDeleteTeamMember" class=" plusIcon createImgWrapper"
                       data-meeting-id="{{meetingId}}" data-team-name="{{teamName}}">
                     <image class="addImage"
-                           src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/plusIcon.png"/>
+                           src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/plusIcon.png"/>
                 </view>
 
             </block>

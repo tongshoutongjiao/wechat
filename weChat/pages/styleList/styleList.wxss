@@ -84,7 +84,7 @@ action-sheet-cancel{
     display:inline-block;
     width:45rpx;
     height:45rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/setIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/setIcon.png");
     background-size:cover;
     margin-top:28rpx;
     margin-right:45rpx;

@@ -15,7 +15,7 @@
     display:inline-block;
     width:26rpx;
     height:26rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/closeIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/closeIcon.png");
     background-size:cover;
     margin-top:34rpx;
     margin-left:18rpx;
@@ -38,7 +38,7 @@
     margin-top:24rpx;
     width:16rpx;
     height:30rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/enterIconImg.png ");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/enterIconImg.png ");
     background-size:cover;
     float:right;
 }
@@ -50,7 +50,7 @@
     display:inline-block;
     width:30rpx;
     height:30rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/errCodeIcon.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/errCodeIcon.png");
     margin-right: 30rpx;
 }
 
@@ -102,7 +102,7 @@
 .memberList .member .layer image{
     display: inline-block;
     position: absolute;
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete1.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete1.png");
     right: 0;
     top:0;
     left:0;
@@ -120,7 +120,7 @@
     display: none;
 }
 .memberList .active .layer image{
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete2.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete2.png");
 }
 
 

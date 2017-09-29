@@ -14,7 +14,7 @@
         </view>
     </view>
     <view class="memberBtn" data-team-name="{{teamName}}"  data-meeting-id="{{meetingId}}">
-        <image class="memberIcon" src="http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/newTeamer.png"/>
+        <image class="memberIcon" src="http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/newTeamer.png"/>
         <button open-type="share">邀请好友加入</button>
     </view>
 </view>

@@ -30,7 +30,7 @@
     margin: auto;
     width:24rpx;
     height:28rpx;
-    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/forWord.png");
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/forWord.png");
     background-size:cover;
     margin-top: 30rpx;
 }

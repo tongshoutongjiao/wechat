@@ -65,11 +65,11 @@
     width:66rpx ;
     height: 66rpx;
     border-radius: 50%;
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/delete1.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete1.png");
     background-size: cover;
 }
 .content .active .activeIcon{
-    background-image: url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/selected.png");
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/selected.png");
   z-index: 100;
 }
 
