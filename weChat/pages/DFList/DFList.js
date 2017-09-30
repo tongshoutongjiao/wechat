@@ -36,8 +36,14 @@ const option = util.extend(util, {
             url: `${config.domain}/app/designs/deep-fashion`,
             method: 'GET',
             success: function (d) {
+
                 let data = d.data.result.folders;
                 if (data) {
+                    that.setData({
+                        hasSelectData:true
+
+                    });
+
                     // 遍历data中的每一项，对data中的数据图片进行修改
                     let dataFixed = that.fixFavoriteImg(data);
                     that.setData({
@@ -46,6 +52,10 @@ const option = util.extend(util, {
                     // 图片列表页
                     //  将精选集中的数据存储为app级别的数据，以便后边列表页读取
                     app.data.dfDate = data;
+                }else {
+                    that.setData({
+                        hasSelectData:false
+                    })
                 }
             }
         });
@@ -62,10 +72,8 @@ const option = util.extend(util, {
             rate;
         // 遍历favorite中的每一项
         list.forEach(function (item,index) {
-
             item.selected=false;
             item.index=index;
-
             column = parData.columns[0].top <= parData.columns[1].top ? parData.columns[0] : parData.columns[1];
 
             // 宽高比
@@ -111,7 +119,6 @@ const option = util.extend(util, {
         data.forEach(function (item, index) {
             // 初始化当前精选集图片的列表样式
             item.index=index;
-
 
             item.columns = [{
                 index: 0,

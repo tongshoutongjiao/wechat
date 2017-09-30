@@ -127,15 +127,21 @@
     opacity:0.6;
 }
 
-
-
-
 .imgList{
     position: relative;
 }
 
 .imgList .imgWrapper{
     position: absolute;
+
+}
+.nonStyle{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 53%;
+   letter-spacing: 2px;
+    color:#9ca29d;
 
 }
 

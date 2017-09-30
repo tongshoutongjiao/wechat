@@ -219,21 +219,23 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 13px;
+    font-size: 14px;
     margin-right:30rpx;
-    line-height: 24rpx;
-
+    line-height: 28rpx;
 }
 .waveTime{
     display: inline-block;
     font-size: 14px;
     overflow: hidden;
-    line-height: 24rpx;
+    line-height: 28rpx;
+
 }
 .underLineBorder{
     position: relative;
     border-bottom: 1px solid #dfdfdf;
     padding-bottom: 10rpx;
     padding-top: 10rpx;
+
+
 }
 

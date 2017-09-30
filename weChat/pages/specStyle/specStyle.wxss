@@ -68,7 +68,7 @@ scroll-view .additionImg image{
     display:inline-block;
     width:44rpx;
     height:44rpx;
-    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/deleteIcon.png");
+    background-image:url("http://ruhnnstatic.oss-cn-hangzhou.aliyuncs.com/bigbench/deleteIcon.png");
     background-size:cover;
     margin-top:34rpx;
     cursor:pointer;
