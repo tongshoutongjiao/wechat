@@ -36,7 +36,6 @@
                 <button>完成</button>
             </view>
     </block>
-
     <block wx:else>
       <view class="nonStyle">
           您还没有精选集

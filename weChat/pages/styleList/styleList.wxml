@@ -22,7 +22,7 @@
     <block wx:else>
         <scroll-view scroll-Y="true" class="styleList">
             <view class="imgWrapper" wx:for="{{specStyleData}}"  bindtap="navigatorToSpecStyle" data-designer-id="{{item.designId}}"  data-sort-id="{{item.sortId}}">
-                <image src="{{item.url}}" />
+                <image mode="aspectFill" src="{{item.url}}" />
             </view>
 
             <!--测试-->
