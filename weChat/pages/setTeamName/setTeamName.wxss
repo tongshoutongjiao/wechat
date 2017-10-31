@@ -48,7 +48,7 @@
     font-size: 12px;
     text-align: center;
     line-height:45rpx;
-    max-width: 100rpx;
+    max-width: 95rpx;
     overflow: hidden;
 }
 .memberList .member .memberName{

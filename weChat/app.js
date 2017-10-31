@@ -100,8 +100,6 @@ const option = extend(require('./utils/readyEvent'), {
             withCredentials: true,
             success: function (resUser) {
                 // 保存用户信息，同时将获取到的用户信息发送给后台
-                console.log('resUser');
-                console.log(resUser);
                 that.data.userInfo = resUser.userInfo;
                 that.getSessionStr(code, resUser);
                 userData = resUser.userInfo;

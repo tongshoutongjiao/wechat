@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c051a1a5-e877-4fdc-abc6-3ac657fdad72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bigBenchImg/deleteIcon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bigBenchImg/deleteIcon.png.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/DFList/DFList.wxml" afterPath="$PROJECT_DIR$/weChat/pages/DFList/DFList.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss" afterPath="$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml" afterPath="$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/styleList/styleList.wxml" afterPath="$PROJECT_DIR$/weChat/pages/styleList/styleList.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/app.js" afterPath="$PROJECT_DIR$/weChat/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/index/index.js" afterPath="$PROJECT_DIR$/weChat/pages/index/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/index/index.wxml" afterPath="$PROJECT_DIR$/weChat/pages/index/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/setTeamName/setTeamName.wxss" afterPath="$PROJECT_DIR$/weChat/pages/setTeamName/setTeamName.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weChat/pages/styleList/styleList.js" afterPath="$PROJECT_DIR$/weChat/pages/styleList/styleList.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,95 +26,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="specStyle.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml">
+      <file leaf-file-name="styleList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weChat/pages/styleList/styleList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="391">
+              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding>
-                <element signature="n#view#1;n#view#0;n#!!top" expanded="false" />
+                <element signature="e#0#47#0" expanded="false" />
+                <element signature="e#199#345#0" expanded="false" />
+                <element signature="e#1055#1218#0" expanded="false" />
+                <element signature="e#1273#1320#0" expanded="false" />
+                <element signature="e#1360#1426#0" expanded="false" />
+                <element signature="e#1461#2008#0" expanded="false" />
+                <element signature="e#1553#2000#0" expanded="false" />
+                <element signature="e#1708#1990#0" expanded="false" />
+                <element signature="e#2049#2181#0" expanded="false" />
+                <element signature="e#2982#3142#0" expanded="false" />
+                <element signature="e#3196#3282#0" expanded="false" />
+                <element signature="e#3624#4772#0" expanded="false" />
+                <element signature="e#3674#3769#0" expanded="false" />
+                <element signature="e#3794#4763#0" expanded="false" />
+                <element signature="e#3962#4202#0" expanded="false" />
+                <element signature="e#4240#4753#0" expanded="false" />
+                <element signature="e#4358#4739#0" expanded="false" />
+                <element signature="e#4435#4539#0" expanded="false" />
+                <element signature="e#4575#4644#0" expanded="false" />
+                <element signature="e#4814#4950#0" expanded="false" />
+                <element signature="e#4983#6062#0" expanded="false" />
+                <element signature="e#5071#6054#0" expanded="false" />
+                <element signature="e#5193#6043#0" expanded="false" />
+                <element signature="e#5394#5454#0" expanded="false" />
+                <element signature="e#5502#5899#0" expanded="false" />
+                <element signature="e#5537#5760#0" expanded="false" />
+                <element signature="e#5808#5880#0" expanded="false" />
+                <element signature="e#5905#6028#0" expanded="false" />
+                <element signature="e#5940#6008#0" expanded="false" />
+                <element signature="e#6291#6878#0" expanded="false" />
+                <element signature="e#6405#6535#0" expanded="false" />
+                <element signature="e#6558#6871#0" expanded="false" />
+                <element signature="e#6669#6727#0" expanded="false" />
+                <element signature="e#6765#6861#0" expanded="false" />
+                <element signature="e#7041#7377#0" expanded="false" />
+                <element signature="e#7105#7281#0" expanded="false" />
+                <element signature="e#7175#7269#0" expanded="false" />
+                <element signature="e#7287#7371#0" expanded="false" />
+                <element signature="e#7314#7359#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styleList.wxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/styleList/styleList.wxml">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/weChat/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="23" column="165" lean-forward="true" selection-start-line="23" selection-start-column="165" selection-end-line="23" selection-end-column="165" />
+            <state relative-caret-position="-1560">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamName.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/teamName/teamName.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamName.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/teamName/teamName.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFList.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="138" column="9" lean-forward="false" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
-              <folding>
-                <element signature="e#2320#2461#0" expanded="false" />
-                <element signature="e#2471#2498#0" expanded="false" />
-                <element signature="e#2520#2548#0" expanded="false" />
-                <element signature="e#2559#2688#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specStyle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/specStyle/specStyle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="e#2838#3287#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFList.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-              <folding>
-                <element signature="n#view#0;n#block#0;n#view#0;n#!!top" expanded="false" />
-                <element signature="n#scroll-view#0;n#block#0;n#view#0;n#!!top" expanded="false" />
-                <element signature="n#view#1;n#block#0;n#view#0;n#!!top" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,8 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/createTeam/createTeam.wxss" />
-        <option value="$PROJECT_DIR$/pages/deleteTeamMember/deleteTeamMember.wxss" />
         <option value="$PROJECT_DIR$/pages/inviteFriend/inviteFriend.wxss" />
         <option value="$PROJECT_DIR$/pages/joinTeam/joinTeam.wxss" />
         <option value="$PROJECT_DIR$/pages/styleList/styleList.wxss" />
@@ -180,14 +145,10 @@
         <option value="$PROJECT_DIR$/big-img-resource/package.json" />
         <option value="$PROJECT_DIR$/weChat/pages/inviteFriend/inviteFriend.wxml" />
         <option value="$PROJECT_DIR$/weChat/pages/QRcode/QRcode.js" />
-        <option value="$PROJECT_DIR$/weChat/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/weChat/app.wxss" />
-        <option value="$PROJECT_DIR$/weChat/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/weChat/app.js" />
         <option value="$PROJECT_DIR$/weChat/pages/specStyle/specStyle.js" />
         <option value="$PROJECT_DIR$/weChat/utils/readyEvent.js" />
         <option value="$PROJECT_DIR$/weChat/pages/joinTeam/joinTeam.js" />
-        <option value="$PROJECT_DIR$/weChat/pages/styleList/styleList.js" />
         <option value="$PROJECT_DIR$/weChat/pages/teamName/teamName.wxss" />
         <option value="$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxss" />
         <option value="$PROJECT_DIR$/weChat/pages/DFList/DFList.js" />
@@ -195,6 +156,12 @@
         <option value="$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss" />
         <option value="$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml" />
         <option value="$PROJECT_DIR$/weChat/pages/styleList/styleList.wxml" />
+        <option value="$PROJECT_DIR$/weChat/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/weChat/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/weChat/pages/setTeamName/setTeamName.wxss" />
+        <option value="$PROJECT_DIR$/weChat/pages/styleList/styleList.js" />
+        <option value="$PROJECT_DIR$/weChat/config.js" />
+        <option value="$PROJECT_DIR$/weChat/app.js" />
       </list>
     </option>
   </component>
@@ -242,66 +209,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weChat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weChat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamName" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bigBenchWechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weChat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -446,21 +359,30 @@
       <workItem from="1507031384704" duration="267000" />
       <workItem from="1507514375126" duration="288000" />
       <workItem from="1507707114182" duration="1022000" />
-      <workItem from="1507790036694" duration="504000" />
+      <workItem from="1507790036694" duration="711000" />
+      <workItem from="1507794531184" duration="378000" />
+      <workItem from="1507800628234" duration="3431000" />
+      <workItem from="1507860906394" duration="26000" />
+      <workItem from="1507866157310" duration="591000" />
+      <workItem from="1508119468292" duration="2303000" />
+      <workItem from="1508311935702" duration="1290000" />
+      <workItem from="1508824567372" duration="128000" />
+      <workItem from="1508900411665" duration="659000" />
+      <workItem from="1508987094937" duration="560000" />
+      <workItem from="1509431868960" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137329000" />
+    <option name="totallyTimeSpent" value="147498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-280" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18162619" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17634636" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09497207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24799196" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27710843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -488,9 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js" />
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml" />
-    <entry file="file://$PROJECT_DIR$/pages/DFList/DFList.wxml" />
     <entry file="file://$PROJECT_DIR$/pages/DFList/DFList.wxss" />
     <entry file="file://$PROJECT_DIR$/pages/createTeam/createTeam.wxml" />
     <entry file="file://$PROJECT_DIR$/pages/createTeam/createTeam.js" />
@@ -556,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weChat/pages/QRcode/QRcode.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -598,20 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weChat/pages/teamName/teamName.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4683">
@@ -630,13 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/styleList/styleList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -661,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weChat/pages/dfSpecList/dfSpecList.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -675,26 +559,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#2838#3287#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="138" column="9" lean-forward="false" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
-          <folding>
-            <element signature="e#2320#2461#0" expanded="false" />
-            <element signature="e#2471#2498#0" expanded="false" />
-            <element signature="e#2520#2548#0" expanded="false" />
-            <element signature="e#2559#2688#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,29 +577,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml">
+    <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="n#view#1;n#view#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="861">
+          <caret line="138" column="9" lean-forward="false" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/DFList/DFList.wxml">
+    <entry file="file://$PROJECT_DIR$/weChat/pages/teamName/teamName.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding>
-            <element signature="n#view#0;n#block#0;n#view#0;n#!!top" expanded="false" />
-            <element signature="n#scroll-view#0;n#block#0;n#view#0;n#!!top" expanded="false" />
-            <element signature="n#view#1;n#block#0;n#view#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -732,22 +598,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weChat/pages/teamName/teamName.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weChat/pages/styleList/styleList.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="23" column="165" lean-forward="true" selection-start-line="23" selection-start-column="165" selection-end-line="23" selection-end-column="165" />
+        <state relative-caret-position="425">
+          <caret line="23" column="165" lean-forward="false" selection-start-line="23" selection-start-column="165" selection-end-line="23" selection-end-column="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/specStyle/specStyle.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/setTeamName/setTeamName.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/setTeamName/setTeamName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="933">
+          <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/pages/styleList/styleList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+            <element signature="e#199#345#0" expanded="false" />
+            <element signature="e#1055#1218#0" expanded="false" />
+            <element signature="e#1273#1320#0" expanded="false" />
+            <element signature="e#1360#1426#0" expanded="false" />
+            <element signature="e#1461#2008#0" expanded="false" />
+            <element signature="e#1553#2000#0" expanded="false" />
+            <element signature="e#1708#1990#0" expanded="false" />
+            <element signature="e#2049#2181#0" expanded="false" />
+            <element signature="e#2982#3142#0" expanded="false" />
+            <element signature="e#3196#3282#0" expanded="false" />
+            <element signature="e#3624#4772#0" expanded="false" />
+            <element signature="e#3674#3769#0" expanded="false" />
+            <element signature="e#3794#4763#0" expanded="false" />
+            <element signature="e#3962#4202#0" expanded="false" />
+            <element signature="e#4240#4753#0" expanded="false" />
+            <element signature="e#4358#4739#0" expanded="false" />
+            <element signature="e#4435#4539#0" expanded="false" />
+            <element signature="e#4575#4644#0" expanded="false" />
+            <element signature="e#4814#4950#0" expanded="false" />
+            <element signature="e#4983#6062#0" expanded="false" />
+            <element signature="e#5071#6054#0" expanded="false" />
+            <element signature="e#5193#6043#0" expanded="false" />
+            <element signature="e#5394#5454#0" expanded="false" />
+            <element signature="e#5502#5899#0" expanded="false" />
+            <element signature="e#5537#5760#0" expanded="false" />
+            <element signature="e#5808#5880#0" expanded="false" />
+            <element signature="e#5905#6028#0" expanded="false" />
+            <element signature="e#5940#6008#0" expanded="false" />
+            <element signature="e#6291#6878#0" expanded="false" />
+            <element signature="e#6405#6535#0" expanded="false" />
+            <element signature="e#6558#6871#0" expanded="false" />
+            <element signature="e#6669#6727#0" expanded="false" />
+            <element signature="e#6765#6861#0" expanded="false" />
+            <element signature="e#7041#7377#0" expanded="false" />
+            <element signature="e#7105#7281#0" expanded="false" />
+            <element signature="e#7175#7269#0" expanded="false" />
+            <element signature="e#7287#7371#0" expanded="false" />
+            <element signature="e#7314#7359#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weChat/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

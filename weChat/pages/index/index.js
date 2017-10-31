@@ -84,6 +84,16 @@ const option = util.extend(util, {
                 // 转发失败
             }
         }
+    },
+
+   //
+    checkPage:function () {
+      /*  console.log('卡卡卡');
+         wx.redirectTo({url: '/pages/index/index'});
+        wx.reLaunch({
+            url:'/pages/index/index'
+        })*/
+        this.getTeamDate();
     }
 
 });

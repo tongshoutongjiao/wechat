@@ -50,7 +50,7 @@ const option = util.extend(util, {
     onShow: function () {
 
         // 调用回调函数,获取当前页面的款信息
-       this.getStyleList();
+        this.getStyleList();
     },
 
     actionSheetTap: function () {
@@ -187,7 +187,7 @@ const option = util.extend(util, {
                 that.setData({
                     specStyleData: data,
                 });
-                if(data.length>0){
+                if (data && data.length > 0) {
                     that.setData({
                         hasStyleDate: true,
                         bandName: data[0].bandName,
@@ -197,12 +197,14 @@ const option = util.extend(util, {
                     wx.setNavigationBarTitle({
                         title: data[0].bandName,
                     })
-                }else {
+                } else {
                     that.setData({
                         hasStyleDate: false,
                     });
                 }
+
             }
+
         });
     },
 
