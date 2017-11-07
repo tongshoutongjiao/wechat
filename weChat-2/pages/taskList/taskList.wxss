@@ -1,0 +1,181 @@
+.container{
+    position: relative;
+}
+
+.taskTitle{
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    font-size: 14px;
+    color:#000;
+}
+.taskContainer{
+    position: absolute;
+    top: 76rpx;
+    bottom: 0rpx;
+    box-sizing: border-box;
+}
+
+.cancelStyle .taskInfo .taskRight{
+    width: 420rpx;
+}
+
+
+
+.taskTitle .allTask{
+    line-height:76rpx ;
+}
+.taskTitle .cancelIcon{
+    position: absolute;
+    padding-left: 22rpx;
+    top: 0;
+    left: 0;
+    line-height:76rpx ;
+    font-size: 12px;
+
+}
+
+.taskTitle .sharePart{
+    position: absolute;
+    width:150rpx ;
+    padding-right: 10rpx;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+
+}
+.taskTitle .sharePart .shareIcon{
+    display: inline-block;
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/transferIcon.png");
+    width: 30rpx;
+    height: 26rpx;
+    background-size: cover;
+    margin-right: 10rpx;
+}
+
+.taskTitle .sharePart text{
+    line-height: 76rpx;
+}
+
+.cancelStyle .taskCon{
+    padding-left: 70rpx;
+}
+
+.taskCon{
+    width: 100%;
+    margin-top: 24rpx;
+    height: 342rpx;
+    box-sizing: border-box;
+    padding: 16rpx;
+}
+
+
+
+
+
+
+
+
+
+.authorInfo{
+    height: 40rpx;
+    font-size: 14px;
+    color:#dddddd;
+}
+.authorLeft{
+    float: left;
+    height:100%;
+    width:200rpx;
+}
+.authorLeft view{
+    display: inline-block;
+}
+.authorLeft .authorPhoto{
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+    background: #ddd;
+    float: left;
+    margin-right: 15rpx;
+}
+.authorRight{
+    float: right;
+    line-height: 40rpx;
+}
+.taskInfo{
+    width: 100%;
+    margin-top: 34rpx;
+    height: 236rpx;
+}
+.taskInfo .taskLeft{
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 220rpx;
+}
+.cancelStyle .taskInfo .taskLeft .selectIcon{
+    position:absolute;
+    width:36rpx;
+    height:36rpx;
+    border-radius:50%;
+    border:1px solid lightgray;
+    margin-left:-54rpx;
+    background: #fff;
+}
+
+.cancelStyle .taskInfo .taskLeft .selected{
+   background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete2.png");
+    background-size: cover;
+    width:45rpx;
+    height:45rpx;
+    border: 0rpx;
+
+}
+
+
+
+.taskInfo .taskLeft view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 8rpx;
+    background: lightgray;
+}
+
+
+
+.taskInfo .taskLeft image{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.taskInfo .taskRight{
+    display:inline-block;
+    box-sizing: border-box;
+    padding: 10rpx;
+    width:478rpx;
+    height:246rpx;
+    font-size: 12px;
+    line-height: 40rpx;
+    color: #333;
+    margin-left:20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

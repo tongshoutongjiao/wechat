@@ -1,0 +1,25 @@
+<template name="footNavBar">
+    <view class="styleBottom">
+        <view class="con photoImg" bindtap="actionSheetTap">
+            <view class="photoImgIcon"></view>
+            <view class="textCon">照片</view>
+        </view>
+
+
+        <view class="con taskIndex" bindtap="navigatorToTask">
+            <view class="taskIndexIconWrapper">
+                <view class="taskIndexIcon"></view>
+            </view>
+        </view>
+
+
+        <view class="con dfSelectWrapper">
+            <view class="selectImgIcon"></view>
+            <view class="textCon">DF精选集</view>
+
+        </view>
+
+    </view>
+</template>
+
+

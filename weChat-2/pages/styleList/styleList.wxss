@@ -1,0 +1,33 @@
+.container{
+    position: relative;
+}
+
+.styleList{
+    position: absolute;
+    top: 0;
+    bottom: 136rpx;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-content: space-around;
+}
+.style{
+    display: inline-block;
+    width: 236rpx;
+    height: 232rpx;
+    background: lightgray;
+    border-radius: 8rpx;
+    margin: 6rpx;
+}
+.style:nth-child(3n+1){
+    margin-left: 10rpx;
+}
+
+
+
+
+
+
+
+

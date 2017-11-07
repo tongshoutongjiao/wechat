@@ -1,0 +1,9 @@
+
+
+
+.container{
+    background-image: url('http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/bigbenchIndex.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}

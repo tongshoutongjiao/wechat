@@ -1,0 +1,149 @@
+.container{
+    padding-top: 0;
+}
+.listTitle{
+    width: 100%;
+    height: 90rpx;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+.listTitle view{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 56rpx;
+    vertical-align: middle;
+    color:#393539;
+}
+.listTitle .imgWrap{
+    position: relative;
+    width: 56rpx;
+    height: 100%;
+    margin-right: 14rpx;
+}
+.listTitle .imgWrap image{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin:auto;
+    width: 100%;
+    height: 56rpx;
+    background: lightblue;
+    border-radius: 50%;
+}
+.completeBtn{
+
+    text-align:center;
+    position:absolute;
+    bottom:15rpx;
+    z-index:100;
+    box-sizing:border-box;
+    padding-right:25rpx;
+    left:25rpx;
+    right:0;
+}
+.completeBtn button{
+    background: #18a5e2;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    line-height: 80rpx;
+}
+.dfList .dfSpec{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+}
+.dfList .dfSpec .dfTitle{
+    font-size: 14px;
+    line-height:80rpx ;
+    text-align: center;
+}
+.dfList .dfSpec .dfTitle image{
+    display: inline-block;
+    width:10rpx;
+    height: 18rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/enterIconImg.png ");
+    background-size:cover;
+    float: right;
+    margin-top: 30rpx;
+}
+
+
+/* 图片列表*/
+
+.imgWrapper{
+    position: relative;
+    display: inline-block;
+    border-radius: 6rpx;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.imgWrapper .picImage{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+    background: lightblue;
+}
+.imgWrapper .activeIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width:66rpx ;
+    height: 66rpx;
+    border-radius: 50%;
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete1.png");
+    background-size: cover;
+}
+.imgList .active .activeIcon{
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/selected.png");
+    z-index: 100;
+}
+.dfList{
+    position: absolute;
+    top: 90rpx;
+    left: 0;
+    right:0;
+    bottom: 90rpx;
+    padding: 25rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 0;
+}
+/*图片列表*/
+
+/* 遮罩层*/
+.layer{
+    position:absolute;
+    width:94%;
+    height:96%;
+    background:gray;
+    padding:20rpx;
+    box-sizing:border-box;
+    opacity:0.6;
+}
+
+.imgList{
+    position: relative;
+}
+
+.imgList .imgWrapper{
+    position: absolute;
+
+}
+
+.nonStyle{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 53%;
+   letter-spacing: 2px;
+    color:#9ca29d;
+}
+
+
+

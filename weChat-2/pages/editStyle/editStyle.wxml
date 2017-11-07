@@ -1,0 +1,74 @@
+<view class="container">
+    <view class="stylePhoto">
+        <image src=""/>
+
+    </view>
+    <view class="opinionArea">
+        <view class="topBar conBar text-c">
+            <view class="userInfo ">桥晓明</view>
+            <view class="topBarIcon" bindtap="toggleTextArea"></view>
+            <view class="issueDate">
+                <text>2018-12-09 15:23发布</text>
+            </view>
+        </view>
+        <view class="textArea">
+            <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"
+                      auto-focus="false " placeholder-style="color:#999;" placeholder="自动变高" value="{{opinionValue}}"/>
+            <view class="userList">
+                <view class="text-c f12">
+                    <text class="readNum">7人已阅读</text>
+                </view>
+                <scroll-view scroll-X="true" class="listWrap">
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                    <view class="text-c f12">
+                        <view class='headImg'></view>
+                        <text>桥晓明</text>
+                    </view>
+                </scroll-view>
+            </view>
+
+
+        </view>
+        <view class="btmBar conBar text-c ">
+
+            <view class="leftPart " bindtap="handleShareFriend">
+                <button plain open-type="share" send-message-path=""></button>
+                <text class="transfer">转发</text>
+            </view>
+            <view class="rightPart" bindtap="actionSheetbindchange">
+                <text class="edit">编辑</text>
+            </view>
+        </view>
+        <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+            <block wx:if="fixIcon">
+                <action-sheet-item bindtap="navigatorToSpecStyle">{{actionTxt}}</action-sheet-item>
+            </block>
+            <block wx:else>
+                <view class="text-c" hover-class="none" >{{actionTxt}}</view>
+            </block>
+            <action-sheet-item class="deleteBtnIcon" bindtap="{{deleteFn}}">删除</action-sheet-item>
+            <action-sheet-cancel class="cancel" bindtap="recoverDefaultStatus">取消</action-sheet-cancel>
+        </action-sheet>
+    </view>
+
+
+</view>

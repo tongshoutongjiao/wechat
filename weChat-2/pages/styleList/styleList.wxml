@@ -1,0 +1,16 @@
+<import src="../../template/footerNavBar"/>
+
+<view class="container">
+    <scroll-view scroll-y="true" class="styleList">
+        <view class="style" bindtap="navigatorToSpecStyle"></view>
+        <view class="style" bindtap="navigatorToSpecStyle"></view>
+        <view class="style"></view>
+        <view class="style"></view>
+        <view class="style"></view>
+        <view class="style"></view>
+    </scroll-view>
+
+
+    <template is="footNavBar"></template>
+
+</view>

@@ -1,0 +1,53 @@
+<view class="container">
+    <scroll-view class="specList" scroll-X="true">
+        <view class="spec" style="background:{{bgColor}};"></view>
+        <view class="spec" style="background:{{bgColor}};"></view>
+        <view class="spec" style="background:{{bgColor}};"></view>
+
+        <view class="'addIcon">
+          <view></view>
+        </view>
+    </scroll-view>
+    <view class="stylePhoto">
+        <image src=""/>
+
+    </view>
+
+    <block wx:if="{{!opinionTextArea}}">
+        <view class="editOpinion" bindtap="issueOpinion">
+            <view class="opinion">
+                发表修改意见
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="opinionArea">
+            <view class="topBar conBar text-c">
+                <view class="userInfo ">桥晓明</view>
+                <view class="topBarIcon" bindtap="toggleTextArea"></view>
+            </view>
+            <view class="textArea">
+                <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"autofocus placeholder-style="color:#999;"  placeholder="自动变高" bindconfirm="bindconfirm" value="{{opinionValue}}"/>
+            </view>
+            <view class="btmBar conBar text-c ">
+
+                <view class="leftPart " bindtap="handleShareFriend">
+                    <button open-type="share"></button>
+                    <text class="transfer">转发</text>
+                </view>
+                <view class="rightPart" bindtap="handleSaveOpinion">
+                    <text class="save">保存</text>
+                </view>
+            </view>
+        </view>
+    </block>
+
+
+
+
+
+
+
+
+
+</view>

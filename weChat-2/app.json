@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/styleList/styleList",
+    "pages/specStyle/specStyle",
+    "pages/DFList/DFList",
+    "pages/taskList/taskList",
+    "pages/editStyle/editStyle"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Bigbench",
+    "navigationBarTextStyle": "#fff"
+  }
+}

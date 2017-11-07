@@ -1,0 +1,198 @@
+
+.specList{
+    height: 160rpx;
+    background:#ebebeb;
+    box-sizing: border-box;
+    padding: 18rpx 20rpx 26rpx;
+    white-space: nowrap;
+}
+.specList .spec,.specList .addIcon{
+    width: 116rpx;
+    height: 116rpx;
+    display: inline-block;
+    border-radius: 8rpx;
+    margin-right: 8rpx;
+}
+.specList .addIcon{
+    position: relative;
+    background: #fff;
+
+}
+.specList .addIcon view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:58rpx;
+    height:58rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/addImg.png");
+    background-size:cover;
+}
+
+.stylePhoto{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 160rpx;
+    bottom: 0rpx;
+    background: #C1BE88;
+    
+}
+.stylePhoto image{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.editOpinion{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 102rpx;
+    background:rgba(34,34,34,.9);
+    box-shadow:0 4rpx 8rpx 0 rgba(205,54,213,0.50);
+    border-radius:0 0 8rpx 8rpx;
+    text-align: center;
+}
+.editOpinion .opinion{
+    line-height: 102rpx;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing:0.29px;
+}
+.editOpinion .opinion:before{
+    position:relative;
+    content:'';
+    width:34rpx;
+    height:34rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/newEditIcon.png");
+    background-size:cover;
+    line-height: 102rpx;
+    left:-4rpx;
+    display:inline-block;
+    vertical-align: middle;
+}
+.opinionArea{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 508rpx;
+}
+.opinionArea .conBar{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11rpx 13rpx;
+    background:rgba(34,34,34,.9);
+}
+.opinionArea .topBar{
+    height: 80rpx;
+}
+/*用户信息*/
+.topBar .userInfo{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 66rpx;
+    color: #fff;
+    position: absolute;
+    left: 30rpx;
+}
+.topBar .userInfo:before{
+    content: '';
+    position: relative;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius:50% ;
+    left: -12rpx;
+    background: lightblue;
+    display:inline-block;
+   top: 10rpx;
+
+}
+
+.topBar .topBarIcon{
+    display: inline-block;
+   background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/downSelect.png");
+    background-size: cover;
+    width: 36rpx;
+    height: 18rpx;
+    vertical-align: middle;
+}
+.topBar .topBarIcon:before{
+    content: '';
+    position: relative;
+    width: 36rpx;
+    height: 18rpx;
+    left: 0;
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/downSelect.png");
+    background-size: cover;
+    display:inline-block;
+    top: -7rpx;
+}
+
+/*发表意见多行输入框*/
+
+.opinionArea .textArea{
+    padding:20rpx;
+    height: 300rpx;
+    background:#ebebeb;
+}
+.opinionArea .textArea textarea{
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+}
+
+/*底部操作栏*/
+.opinionArea .btmBar{
+    height: 100rpx;
+    color: #fff;
+    font-size: 16px;
+}
+.opinionArea .btmBar .leftPart{
+    position: relative;
+}
+
+.opinionArea .btmBar button{
+    position: absolute;
+   top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: inline-block;
+}
+
+.opinionArea .btmBar view{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    line-height: 86rpx;
+}
+.opinionArea .btmBar .transfer:before,.opinionArea .btmBar .save:before{
+    position:relative;
+    content:'';
+    background-size:cover;
+    line-height: 102rpx;
+    left:-4rpx;
+    display:inline-block;
+    vertical-align: middle;
+}
+.opinionArea .btmBar .transfer:before{
+    width:32rpx;
+    height:26rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/transferIcon.png");
+}
+.opinionArea .btmBar .save:before{
+    width:28rpx;
+    height:28rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/saveIcon.png");
+
+}
+
+
+
+
+
+
+
+
