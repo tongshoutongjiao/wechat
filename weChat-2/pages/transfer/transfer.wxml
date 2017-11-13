@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="stylePhoto">
+        <image mode="aspectFill"  src="{{curList.photoUrl}}" bindtap="handleLargeImg" data-url="{{curList.photoUrl}}"/>
+    </view>
+    <view class="opinionArea">
+        <view class="topBar conBar text-c">
+            <view class="userPhoto" style="background-image:url({{curList.headUrl}})"></view>
+            <view class="userInfo ">{{curList.nickname}}</view>
+            <view class="issueDate">
+                <text>{{createTime}}发布</text>
+            </view>
+        </view>
+        <view class="textArea" style="{{readerInfo.length?'height:424rpx;box-sizing: border-box;':'height:425rpx;'}}; "        >
+            <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"
+                      auto-focus="false " disabled="true" placeholder-style="color:#999;" placeholder="自动变高" value="{{curList.content}}"/>
+            <block wx:if="{{readerInfo.length}}">
+                <view class="userList">
+                    <view class="text-c f12">
+                        <text class="readNum">{{readerInfo.length}}人已阅读</text>
+                    </view>
+                </view>
+            </block>
+
+        </view>
+        <block wx:if="{{readerInfo.length}}">
+            <scroll-view scroll-X="true" class="listWrap text-c">
+                <view class="text-c f12" wx:for="{{readerInfo}}">
+                    <view class='headImg' style="background-image: url({{item.headImgUrl}})"></view>
+                    <text>{{item.nickname}}</text>
+                </view>
+
+            </scroll-view>
+
+
+        </block>
+        <block wx:else>
+            <button class="btmBar conBar text-c {{sureIcon?'selected':''}}" hover-class="tapedStyle" bindtap="handleConfirmMsg">
+                <view class="sureIcon " ></view>
+                <view class="sure">确认</view>
+            </button>
+        </block>
+
+
+        <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+            <block wx:if="fixIcon">
+                <action-sheet-item bindtap="navigatorToSpecStyle">{{actionTxt}}</action-sheet-item>
+            </block>
+            <block wx:else>
+                <view class="text-c" hover-class="none" >{{actionTxt}}</view>
+            </block>
+            <action-sheet-item class="deleteBtnIcon" bindtap="{{deleteFn}}" data-band-id="{{bandId}}">删除</action-sheet-item>
+            <action-sheet-cancel class="cancel" bindtap="recoverDefaultStatus">取消</action-sheet-cancel>
+        </action-sheet>
+    </view>
+
+</view>

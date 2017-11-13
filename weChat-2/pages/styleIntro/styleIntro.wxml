@@ -1,0 +1,80 @@
+<scroll-view class="container" scroll-Y="true">
+    <view class="stylePhoto">
+        <image mode="aspectFill"  src="{{curList.photoUrl}}" bindtap="handleLargeImg" data-url="{{curList.photoUrl}}"/>
+    </view>
+    <view class="opinionArea">
+        <view class="topBar conBar text-c">
+            <view class="userPhoto" style="background-image:url({{curList.headUrl}})"></view>
+            <view class="userInfo ">{{curList.nickname}}</view>
+            <view class="issueDate">
+                <text>{{createTime}}发布</text>
+            </view>
+        </view>
+        <view class="textArea">
+            <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"
+                      auto-focus="false " disabled="{{textAreaEdit}}" placeholder-style="color:#999;" placeholder="自动变高" value="{{curList.content}}"/>
+            <block wx:if="{{readerInfo.length}}">
+                <view class="userList text-c">
+                    <view class="text-c f12">
+                        <text class="readNum">{{readerInfo.length}}人已阅读</text>
+                    </view>
+                    <scroll-view scroll-X="true" class="listWrap">
+                        <view class="text-c f12" wx:for="{{readerInfo}}">
+                            <view class='headImg' style="background-image: url({{item.headImgUrl}})"></view>
+                            <text>{{item.nickname}}</text>
+                        </view>
+                    </scroll-view>
+                </view>
+            </block>
+        </view>
+        <block wx:if="{{isAuthor}}">
+            <block wx:if="{{fixMode}}">
+                <view  class="btmBar conBar text-c completePar ">
+                    <button class="complete" hover-class="tapedStyle" bindtap="changeTask" data-band-id="{{bandId}}" style="width: 100%">
+                        <text class="save" >完成</text>
+                    </button>
+                </view>
+            </block>
+            <block wx:else>
+                <view  class="btmBar conBar text-c ">
+                    <view class="leftPart " bindtap="handleShareFriend">
+                        <button plain open-type="share"  hover-class="tapedStyle" >
+                            <text class="transfer">转发</text>
+                        </button>
+
+                    </view>
+                    <view class="rightPart" bindtap="actionSheetbindchange" >
+                        <button plain hover-class="tapedStyle">
+                            <text class="edit">编辑</text>
+                        </button>
+
+                    </view>
+                </view>
+            </block>
+
+        </block>
+        <block wx:else>
+            <view  class="btmBar conBar text-c " style="width: 100%">
+                <view class="leftPart noAuthor"bindtap="handleShareFriend">
+                    <button class="transfer" plain open-type="share" send-message-path="">转发</button>
+                </view>
+            </view>
+        </block>
+
+
+
+
+
+
+        <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+            <block wx:if="fixIcon">
+                <action-sheet-item bindtap="navigatorToSpecStyle">{{actionTxt}}</action-sheet-item>
+            </block>
+            <block wx:else>
+                <view class="text-c" hover-class="none" >{{actionTxt}}</view>
+            </block>
+            <action-sheet-item class="deleteBtnIcon" bindtap="{{deleteFn}}" data-band-id="{{bandId}}">删除</action-sheet-item>
+            <action-sheet-cancel class="cancel" bindtap="recoverDefaultStatus">取消</action-sheet-cancel>
+        </action-sheet>
+    </view>
+</scroll-view>

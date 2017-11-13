@@ -1,53 +1,60 @@
-<view class="container">
-    <scroll-view class="specList" scroll-X="true">
-        <view class="spec" style="background:{{bgColor}};"></view>
-        <view class="spec" style="background:{{bgColor}};"></view>
-        <view class="spec" style="background:{{bgColor}};"></view>
+<scroll-view class="container" scroll-Y="true">
 
-        <view class="'addIcon">
-          <view></view>
+        <scroll-view class="specList" scroll-X="true">
+
+            <view style="background:{{item.bg}}" class="spec" wx:for="{{childStyle}}"  wx:key="{{item.id}}" bindtap="switchDetailPic" data-isMain="{{item.isMain?item.isMain:false}}" data-index="{{item.index}}" >
+                <image data-id="{{item.id}}" mode="aspectFill" src="{{item.url}}"/>
+            </view>
+            <view class="'addIcon" bindtap="uploadDetailPic">
+                <view></view>
+            </view>
+        </scroll-view>
+
+
+
+
+        <view class="stylePhoto" style="background: {{parStyle.bg}}"  data-id="{{parStyle.id}}" data-index="{{parStyle.index}}"  data-isMain="{{parStyle.isMain?parStyle.isMain:false}}" >
+            <image mode="aspectFill" src="{{parStyle.url}}" bindlongpress="handleLayer" data-url="{{parStyle.url}}"/>
         </view>
-    </scroll-view>
-    <view class="stylePhoto">
-        <image src=""/>
 
-    </view>
 
-    <block wx:if="{{!opinionTextArea}}">
-        <view class="editOpinion" bindtap="issueOpinion">
-            <view class="opinion">
-                发表修改意见
-            </view>
-        </view>
-    </block>
-    <block wx:else>
-        <view class="opinionArea">
-            <view class="topBar conBar text-c">
-                <view class="userInfo ">桥晓明</view>
-                <view class="topBarIcon" bindtap="toggleTextArea"></view>
-            </view>
-            <view class="textArea">
-                <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"autofocus placeholder-style="color:#999;"  placeholder="自动变高" bindconfirm="bindconfirm" value="{{opinionValue}}"/>
-            </view>
-            <view class="btmBar conBar text-c ">
 
-                <view class="leftPart " bindtap="handleShareFriend">
-                    <button open-type="share"></button>
-                    <text class="transfer">转发</text>
+
+
+
+        <block wx:if="{{!opinionTextArea}}">
+            <button class="editOpinion" bindtap="issueOpinion" hover-class="tapedStyle">
+                <view class="opinion">
+                    发表修改意见
                 </view>
-                <view class="rightPart" bindtap="handleSaveOpinion">
-                    <text class="save">保存</text>
+            </button>
+        </block>
+        <block wx:else>
+            <view class="opinionArea">
+                <view class="topBar conBar text-c">
+                    <view class="userPhoto" style="background-image: url({{userPhoto}})">
+                    </view>
+                    <view class="userInfo ">{{nickName}}</view>
+                    <view class="topBarIcon" bindtap="toggleTextArea"></view>
+                </view>
+                <view class="textArea">
+                    <textarea bindblur="bindTextAreaBlur" maxlength="500" bindfocus="bindTextFocus" cursor-spacing="20px"autofocus placeholder-style="color:#999;"  placeholder="请输入意见内容" bindconfirm="bindconfirm" value="{{opinionValue}}"/>
+                </view>
+                <view class="btmBar conBar text-c complete " >
+                    <button class="save"  hover-class="tapedStyle" bindtap="handleSaveOpinion" data-band-id="{{bandId}}" data-photo-id="{{photoId}}">
+                        完成
+                    </button>
                 </view>
             </view>
+        </block>
+
+
+
+
+
+
+        <view class="styleLayer {{layerFlag?'layer':''}}">
+            <view class="  text-c" bindtap="cancelDelete">取消</view>
+            <view class="text-c" bindtap="handleDelete"  >删除</view>
         </view>
-    </block>
-
-
-
-
-
-
-
-
-
-</view>
+</scroll-view>

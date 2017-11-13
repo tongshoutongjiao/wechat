@@ -18,7 +18,6 @@ const option = extend(require('./utils/readyEvent'), {
         } catch (e) {
             console.log(e)
         }
-        console.log(this);
     },
 
     /*
@@ -31,9 +30,7 @@ const option = extend(require('./utils/readyEvent'), {
         wx.login({
             success: function (res) {
                 if (res.code) {
-                    console.log(res);
                     //发起网络请求
-                    console.log(res);
                     that.getUserInfo(res.code);
                 } else {
                     that.loadFail();
@@ -61,6 +58,7 @@ const option = extend(require('./utils/readyEvent'), {
                 encryptedData: encryptedData
             },
             success: function (response) {
+                console.log(response);
                 let res = response.data;
                 if (res) {
                     // token

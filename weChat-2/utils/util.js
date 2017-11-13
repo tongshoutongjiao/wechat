@@ -90,6 +90,7 @@ exports.getMemberInfo = function (meetingId) {
 
 // 获取用户信息
 exports.getUserInfo = function () {
+
     let that = this;
     wx.getUserInfo({
         success: function (resUser) {
@@ -107,8 +108,22 @@ exports.formatDate = function (obj) {
     let y = 1900 + date.getYear();
     let m = "0" + (date.getMonth() + 1);
     let d = "0" + date.getDate();
-    return y + "-" + m.substring(m.length - 2, m.length) + "-" + d.substring(d.length - 2, d.length);
+    let h='0'+date.getHours();
+    let min='0'+date.getMinutes();
+    return y + "-" + m.substring(m.length - 2, m.length) + "-" + d.substring(d.length - 2, d.length)+' '+h.substring(h.length-2,h.length)+':'+min.substring(min.length-2,min.length);
 };
+
+
+
+// 点击查看大图
+exports.largerImage = function (e) {
+
+    console.log(e.currentTarget);
+    wx.previewImage({
+        urls: [e.currentTarget.dataset.url]
+    });
+};
+
 
 // trim
 
@@ -117,6 +132,24 @@ exports.trim = function (a) {
     // 想办法将中间的多个空格替换为1个
     let regStart = /^\s+/, regEnd = /\s+$/,regMid= /\s+/g;
     return a.replace(regStart, '').replace(regMid,' ').replace(regEnd, '');
+};
+
+
+
+// 随机切换背景颜色
+exports.getRandomColor = function () {
+    let defaultColor = ['#DDC4C4', '#C1BE88', '#D58D8D', '#A2C3AA', '#BAC4D6', '#A9A6D4'];
+    return defaultColor[Math.round(Math.random() * 5)];
+};
+
+// 判断当前页面的上一个页面是否是任务编辑页面
+exports.judgeRoute = function () {
+    console.log('routetet')
+    let routeArray=getCurrentPages();
+    if(routeArray.length>=2){
+        console.log(routeArray[routeArray.length-2]);
+        return  routeArray[routeArray.length-2].__route__
+    }
 };
 
 

@@ -12,12 +12,14 @@ const option = util.extend(util, {
         actionSheetHidden: true,
         specStyleData: [],
         tempFilePaths: '',
-        designList: []
+        designList: [],
+        afterTaskIcon: false,
+        afterPhoto: false,
+        afterDf: false
     },
     onLoad: function (option) {
         const that = this;
         let scene;
-        console.log(option);
         app.onReadyPage(function () {
             if (app.data.loadSuccess === false) {
                 that.setData({
@@ -30,32 +32,73 @@ const option = util.extend(util, {
                 });
             }
         });
-        // 调用回调函数,获取当前页面的款信息
-        app.onReadyPage(this.getStyleList.bind(this));
 
         // 通过扫码进入加入款列表页面，先获取二维码中的scene值
         option.scene ? scene = decodeURIComponent(option.scene) : '';
-        scene ? this.splitScene(scene, option) : this.setData({
-            bandId: option.bandId,
-            bandName: option.bandName,
-            saleTime: option.saleTime,
-            curSeason: option.category
-        });
 
-        option.bandName ? wx.setNavigationBarTitle({
-            title: option.bandName,
-        }) : '';
+        scene ? this.splitScene(scene, option) : this.setData({
+            bandId: option.bandId
+        });
+        // 调用回调函数,获取当前页面的款信息
+        app.onReadyPage(this.getStyleList.bind(this));
     },
 
     onShow: function () {
-
         // 调用回调函数,获取当前页面的款信息
         this.getStyleList();
+        this.setData({
+            afterTaskIcon: false,
+            afterPhoto: false,
+            afterDf: false
+        })
     },
 
+    // 获取所有款信息
+    getStyleList: function () {
+        let bandId = this.data.bandId,
+            that = this;
+        this.request({
+            url: `${config.domain}/app/designs/${bandId}`,
+            method: 'GET',
+            success: function (d) {
+                let data = d.data.result ? d.data.result : null;
+                data.forEach(function (item) {
+                    item.bg = that.getRandomColor();
+                });
+
+                that.setData({
+                    specStyleData: data,
+                });
+                if (data && data.length > 0) {
+                    that.setData({
+                        hasStyleDate: true,
+                        bandName: data[0].bandName,
+                        saleTime: data[0].saleTime,
+                        curSeason: data[0].category
+                    });
+                    wx.setNavigationBarTitle({
+                        title: data[0].bandName,
+                    })
+                } else {
+                    that.setData({
+                        hasStyleDate: false,
+                    });
+                }
+
+            }
+
+        });
+    },
+
+    // 点击照片上传图片
     actionSheetTap: function () {
         const that = this;
+        console.log('1');
         // 上传图片的函数，可以将其写在公共的方法utils文件下
+        this.setData({
+            afterPhoto: true,
+        })
+
         wx.chooseImage({
             count: 9,
             sizeType: ['original', 'compressed'],
@@ -80,6 +123,7 @@ const option = util.extend(util, {
     // 获取OSS上传凭证和key列表
     getPolicy: function (picUrl, waveId) {
         let that = this;
+
         this.request({
             url: `${config.domain}/app/oss/get-policy`,
             method: 'GET',
@@ -166,50 +210,7 @@ const option = util.extend(util, {
     },
 
     navigatorToSpecStyle: function (e) {
-        console.log(e);
         wx.navigateTo({url: '/pages/specStyle/specStyle?' + util.jsonToParam(e.currentTarget.dataset)});
-    },
-
-    getStyleList: function () {
-        let bandId = this.data.bandId,
-            that = this;
-
-        this.request({
-            url: `${config.domain}/app/designs/${bandId}`,
-            method: 'GET',
-            success: function (d) {
-                console.log('data');
-                console.log(d);
-
-                let data = d.data.result ? d.data.result : null;
-                console.log(data);
-                that.setData({
-                    specStyleData: data,
-                });
-                if (data && data.length > 0) {
-                    that.setData({
-                        hasStyleDate: true,
-                        bandName: data[0].bandName,
-                        saleTime: data[0].saleTime,
-                        curSeason: data[0].category
-                    });
-                    wx.setNavigationBarTitle({
-                        title: data[0].bandName,
-                    })
-                } else {
-                    that.setData({
-                        hasStyleDate: false,
-                    });
-                }
-
-            }
-
-        });
-    },
-
-    // 跳转到设置波段的界面
-    setWaveName: function (e) {
-        wx.navigateTo({url: '/pages/setWaveDate/setWaveDate?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
     // 上传款图片,最多上传9张图片
@@ -243,11 +244,20 @@ const option = util.extend(util, {
     },
 
     // 跳转到任务列表页面
-    navigatorToTask:function () {
-        wx.navigateTo({url: '/pages/taskList/taskList'});
-
+    navigatorToTask: function (e) {
+        this.setData({
+            afterTaskIcon: true
+        });
+        wx.navigateTo({url: '/pages/taskList/taskList?' + util.jsonToParam(e.currentTarget.dataset)});
     },
 
+    // 跳转到df精选集页面
+    navigatorToDFList: function (e) {
+        this.setData({
+            afterDf: true
+        });
+        wx.navigateTo({url: '/pages/DFList/DFList?' + util.jsonToParam(e.currentTarget.dataset)});
+    },
     //以逗号分隔截取字符串
     splitScene: function (scene, option) {
         let sceneArray;
@@ -258,21 +268,12 @@ const option = util.extend(util, {
                 bandName: sceneArray[1]
             });
         } else {
+
             this.setData({
                 bandId: scene
             });
         }
     }
-
-
-
-
-//   1   底部到导航栏点击事件，传递数字，根据用户的点击情况，获取不同的参数，然后让该参数传递到页面上，同时再传递给底部导航栏模板，然后显示不同的选中样式
-// 0 代表点击的是照片，执行相应函数，修改当前页面选中状态（款列表页默认是选中的）。
-// 1 代表点击的任务列表，执行此操作需要跳转到任务列表页面，在新的页面获取到传递的key value 值，然后在列表页面控制相应的选中顺序，
-
-
-
 
 });
 Page(option);

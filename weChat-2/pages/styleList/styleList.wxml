@@ -1,16 +1,22 @@
 <import src="../../template/footerNavBar"/>
 
-<view class="container">
-    <scroll-view scroll-y="true" class="styleList">
-        <view class="style" bindtap="navigatorToSpecStyle"></view>
-        <view class="style" bindtap="navigatorToSpecStyle"></view>
-        <view class="style"></view>
-        <view class="style"></view>
-        <view class="style"></view>
-        <view class="style"></view>
-    </scroll-view>
 
+<scroll-view scroll-Y="true" class="container">
+    <block wx:if="{{!hasStyleDate}}">
+        <view class="indexBg">
+            <view class="content text-c">
+                <text>点击照片或者DF精选集上传图片</text>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <scroll-view scroll-y="true" class="styleList">
+            <view class="style" bindtap="navigatorToSpecStyle" wx:for="{{specStyleData}}"
+                  data-designer-id="{{item.designId}}" data-band-id="{{bandId}}" data-sort-id="{{item.sortId}}" style="background: {{item.bg}}">
+                <image mode="aspectFill" src="{{item.url}}"/>
+            </view>
+        </scroll-view>
+    </block>
+    <template is="footNavBar" data="{{bandId,afterTaskIcon, afterPhoto,afterDf}}"></template>
 
-    <template is="footNavBar"></template>
-
-</view>
+</scroll-view>

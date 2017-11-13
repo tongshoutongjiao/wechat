@@ -1,0 +1,200 @@
+
+.stylePhoto{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0rpx;
+    background: #C1BE88;
+
+}
+.stylePhoto image{
+    display: inline-block;
+    width: 100%;
+    height: 98%;
+}
+
+.opinionArea{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 644rpx;
+}
+.opinionArea .conBar{
+    width: 100%;
+    box-sizing: border-box;
+    background:rgba(34,34,34,.9);
+}
+.opinionArea .topBar{
+    height: 80rpx;
+    position: relative;
+}
+
+.opinionArea .issueDate{
+    display: inline-block;
+    font-size: 12px;
+    color: #DDD;
+    float: right;
+    line-height: 80rpx;
+    margin-right: 20rpx;
+}
+
+
+/*用户信息*/
+.topBar{
+    position: relative;
+}
+
+
+.topBar .userInfo{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 80rpx;
+    color: #fff;
+    position: absolute;
+    left: 80rpx;
+}
+
+.topBar .userPhoto{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius:50% ;
+    left: 20rpx;
+    top: 52%;
+    display:inline-block;
+    background-size: cover;
+    transform: translateY(-50%);
+}
+
+
+
+/*发表意见多行输入框*/
+
+.opinionArea .textArea{
+    position: relative;
+    padding:20rpx;
+    height: 390rpx;
+    background:#ebebeb;
+    background-image: url("http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/areaBg.png");
+    background-size:cover ;
+}
+
+
+.opinionArea .textArea .userList{
+    position:absolute;
+    bottom:30rpx;
+    left:0;
+    width:100%;
+}
+
+.opinionArea .textArea .userList .text-c text{
+    color: #fff;
+}
+
+
+.opinionArea .textArea textarea{
+    font-size: 14px;
+    color: #fff;
+    opacity: .44;
+    width: 100%;
+    height: 260rpx;
+}
+.opinionArea .textArea .userList .text-c text.readNum:before{
+    position:relative;
+    content:'--';
+    left:-20rpx;
+    display:inline-block;
+
+}
+.opinionArea .textArea .userList .text-c text.readNum:after{
+    position:relative;
+    content:'--';
+    left:20rpx;
+    display:inline-block;
+}
+
+.listWrap{
+    width: 100%;
+    height: 140rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    background:rgba(34,34,34,1);
+    padding: 16rpx 20rpx;
+    box-sizing: border-box;
+}
+.listWrap view{
+    position:relative;
+    color:#fff;
+    display:inline-block;
+    height:100rpx;
+    width:96rpx;
+    margin-right:56rpx;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+
+}
+.listWrap .headImg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 50%;
+    background: #fff;
+    background-size: cover;
+}
+.listWrap view text{
+    position: absolute;
+    left: 0;
+    transform: transllateX(-50%);
+    bottom: 0;
+    width: 96rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/*底部操作栏*/
+.opinionArea .btmBar{
+    height: 102rpx;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0;
+}
+.opinionArea .tapedStyle{
+    background: #383434;
+}
+.opinionArea .btmBar view{
+    display: inline-block;
+    line-height: 102rpx;
+}
+.opinionArea .btmBar .sureIcon{
+    width: 28rpx;
+    height: 26rpx;
+    background-size: cover;
+    margin-right: 18rpx;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+}
+.opinionArea .selected .sureIcon{
+    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/sureIcon.png");
+}
+
+
+
+
+/* 底部弹出框样式*/
+action-sheet view,action-sheet-item,action-sheet-cancel{
+    line-height: 106rpx;
+    font-size: 14px;
+    padding: 0;
+}
+action-sheet-cancel{
+    line-height:70rpx ;
+}
+.deleteBtnIcon{
+    color: red;
+}

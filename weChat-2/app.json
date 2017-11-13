@@ -5,7 +5,8 @@
     "pages/specStyle/specStyle",
     "pages/DFList/DFList",
     "pages/taskList/taskList",
-    "pages/editStyle/editStyle"
+    "pages/styleIntro/styleIntro",
+    "pages/transfer/transfer"
   ],
   "window": {
     "backgroundTextStyle": "light",

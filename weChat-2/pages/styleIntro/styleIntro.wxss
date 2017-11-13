@@ -11,7 +11,7 @@
 .stylePhoto image{
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: 98%;
 }
 
 .opinionArea{
@@ -24,8 +24,13 @@
     width: 100%;
     box-sizing: border-box;
     padding: 11rpx 13rpx;
-    background:rgba(34,34,34,.7);
+    background:rgba(34,34,34,.9);
 }
+.opinionArea .conBar .btmBar{
+    background:rgba(34,34,34,1);
+}
+
+
 .opinionArea .topBar{
     height: 80rpx;
     position: relative;
@@ -41,50 +46,33 @@
 
 
 /*用户信息*/
+.topBar{
+    position: relative;
+}
+
+
 .topBar .userInfo{
     display: inline-block;
     font-size: 12px;
     line-height: 66rpx;
     color: #fff;
     position: absolute;
-    left: 30rpx;
+    left: 80rpx;
 }
-.topBar .userInfo:before{
-    content: '';
-    position: relative;
+
+.topBar .userPhoto{
+    position: absolute;
     width: 40rpx;
     height: 40rpx;
     border-radius:50% ;
-    left: -12rpx;
-    background: lightblue;
+    left: 20rpx;
+    top: 52%;
     display:inline-block;
-    top: 10rpx;
-
-}
-
-.topBar .topBarIcon{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/downSelect.png");
     background-size: cover;
-    width: 36rpx;
-    height: 18rpx;
-    vertical-align: middle;
+    transform: translateY(-50%);
 }
-.topBar .topBarIcon:before{
-    content: '';
-    position: relative;
-    width: 36rpx;
-    height: 18rpx;
-    left: 0;
-    background-image: url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/downSelect.png");
-    background-size: cover;
-    display:inline-block;
-    top: -7rpx;
-}
+
+
 
 /*发表意见多行输入框*/
 
@@ -101,10 +89,7 @@
 }
 .opinionArea .textArea .userList .text-c text{
     color: #fff;
-    opacity: .44;
-
 }
-
 
 .opinionArea .textArea textarea{
     font-size: 14px;
@@ -137,11 +122,10 @@
 .opinionArea .textArea .userList .listWrap view{
     position: relative;
     color: #fff;
-    opacity: .44;
     display: inline-block;
     height: 100rpx;
-    width: 76rpx;
-    margin-right: 72rpx;
+    width: 96rpx;
+    margin-right: 40rpx;
 }
 .opinionArea .textArea .userList .listWrap .headImg{
     position: absolute;
@@ -151,37 +135,92 @@
     height: 52rpx;
     border-radius: 50%;
     background: #fff;
+    background-size: cover;
 }
 .opinionArea .textArea .userList .listWrap view text{
     position: absolute;
     left: 0;
     transform: transllateX(-50%);
     bottom: 0;
+    width: 96rpx;
 }
-
 
 /*底部操作栏*/
 .opinionArea .btmBar{
-    height: 100rpx;
+    height: 102rpx;
     color: #fff;
     font-size: 16px;
-}
-.opinionArea .btmBar .leftPart{
-    position: relative;
+    padding: 0;
+    background:rgba(34,34,34,1);
 }
 
-.opinionArea .btmBar button{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0px;
+.opinionArea .btmBar .leftPart{
+    position: relative;
+    line-height: 102rpx;
 }
+
+
+.opinionArea .btmBar .leftPart button,.opinionArea .btmBar .rightPart button{
+    width:100%;
+    height:100%;
+    position:absolute;
+    border:0;
+    color: #fff;
+    background: #000;
+}
+
+
+
+
+.opinionArea .btmBar .rightPart button{
+    width: 50%;
+    border-radius: 0;
+    height: 102rpx;
+}
+.opinionArea .btmBar .rightPart wx-button:before{
+    position:relative;
+    content:'';
+    background-size:cover;
+    line-height: 102rpx;
+    left:-18rpx;
+    display:inline-block;
+    vertical-align: middle;
+    width: 1px;
+    background: #fff;
+}
+
+.opinionArea .btmBar .leftPart .tapedStyle,.opinionArea .btmBar .rightPart .tapedStyle{
+    background: #383434;
+}
+
+
+
+.opinionArea .btmBar .tapedStyle{
+    background: #383434;
+}
+.opinionArea .completePar{
+    padding: 0;
+}
+.opinionArea .btmBar .complete{
+  width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+}
+.opinionArea .btmBar .complete text{
+    line-height: 102rpx;
+}
+.opinionArea .btmBar .tapedStyle{
+    background: #383434;
+}
+
+
+
 
 .opinionArea .btmBar view{
     display: inline-block;
-    height: 100%;
+    height: 90%;
     width: 50%;
     line-height: 86rpx;
 }
@@ -205,6 +244,28 @@
     background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/newEditIcon.png");
 
 }
+.opinionArea .btmBar .save:before{
+    position:relative;
+    content:'';
+    background-size:cover;
+    line-height: 102rpx;
+    left:-18rpx;
+    display:inline-block;
+    vertical-align: middle;
+    top: -3rpx;
+}
+.opinionArea .btmBar .save:before{
+    width:40rpx;
+    height:40rpx;
+    background-image:url("http://bi-workbench.oss-cn-hangzhou.aliyuncs.com/wechat_app/delete1.png");
+}
+
+/* 不是创建者样式*/
+.opinionArea .btmBar .noAuthor{
+    width: 100%;
+
+}
+
 
 
 

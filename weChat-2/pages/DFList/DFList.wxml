@@ -19,13 +19,13 @@
 
                     <view class="imgList"  style="height:{{item.maxHeight}}rpx;" >
 
-                        <view class="imgWrapper {{list.selected?'active':''}} " bindtap="addSelectIcon" data-select-index="{{item.index}}" data-index="{{list.index}}" data-selected="{{list.selected}}" wx:for="{{item.favorites}}" wx:key="folderId"  wx:for-item="list" style="top:{{list.top}}rpx;left:{{list.left}}rpx; height:{{list.boxHeight}}rpx;width:{{list.boxWidth}}rpx;">
+                        <view class="imgWrapper {{list.selected?'active':''}}" bindtap="addSelectIcon" data-select-index="{{item.index}}" data-index="{{list.index}}" data-selected="{{list.selected}}" wx:for="{{item.favorites}}" wx:key="folderId"  wx:for-item="list" style="top:{{list.top}}rpx;left:{{list.left}}rpx; height:{{list.boxHeight}}rpx;width:{{list.boxWidth}}rpx;">
 
                             <image class="activeIcon"></image>
 
                             <view class="{{list.selected?'layer':''}}"></view>
 
-                            <image class="picImage" src="{{list.mediaUrl}}?x-oss-process=image/resize,w_350,limit_0" mode="aspectFill">
+                            <image class="picImage" style="background: {{list.bg}};"  src="{{list.mediaUrl}}?x-oss-process=image/resize,w_350,limit_0" mode="aspectFill">
                             </image>
                         </view>
                     </view>

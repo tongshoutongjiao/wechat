@@ -1,7 +1,7 @@
 <!--<import src="../../template/footerNavBar"/>-->
 
 
-<view  class="container">
+<view class="container">
     <block wx:if="{{!cancelFlag}}">
         <view class="taskTitle">
             <view class="allTask">所有任务</view>
@@ -16,84 +16,36 @@
             <view class="cancelIcon" bindtap="cancelTransfer">取消</view>
             <view class="allTask">所有任务</view>
             <view class="sharePart">
-                <view class="shareIcon">(0)</view>
-                <text>确定</text>
+                <view  style="color: #6668ea;display: inline-block">({{selectLength}}) </view>
+                <text style="color: #6668ea"> 确定</text>
+                <button plain open-type="share" send-message-path=""></button>
             </view>
+            
         </view>
     </block>
 
-
-
-
-
-
-    <scroll-view scroll-y="true" class="taskContainer {{cancelFlag? 'cancelStyle':''}}" >
-        <view class="taskCon">
-
-            <view class="authorInfo">
+    <scroll-view scroll-y="true" class="taskContainer {{cancelFlag? 'cancelStyle':''}}">
+        <view wx:for="{{taskList}}" class="taskCon">
+            <view class="authorInfo"  >
                 <view class="authorLeft">
-                    <view class="authorPhoto"></view>
-                    <view class="nickName">桥晓明</view>
+                    <view class="authorPhoto" style="background-image: url({{item.headUrl}})"></view>
+                    <view class="nickName">{{item.nickname}}</view>
                 </view>
                 <view class="authorRight">
-                    <text >2018-12-09 </text>
-                    <text> 15:23发布</text>
+                    <text>{{item.createTime}}发布</text>
                 </view>
             </view>
-            <view class="taskInfo">
+            <view class="taskInfo" data-band-id="{{bandId}}" data-task-id="{{item.id}}" bindtap="navigatorToStyleIntro">
                 <view class="taskLeft">
-                    <view></view>
-                    <view class="selectIcon {{selectedFlag? 'selected':''}}" bindtap="changeSelect"></view>
+                    <view style="background-image: url({{item.photoUrl}})"></view>
+                    <view class="selectIcon {{item.selected?'selected':''}}" data-selected="{{item.selected}}" data-index="{{item.index}}" catchtap="changeSelect"></view>
                 </view>
                 <scroll-view scroll-y="true" class="taskRight">
-                    1234555
-                </scroll-view>
-
-            </view>
-        </view>
-        <view class="taskCon">
-            <view class="authorInfo">
-                <view class="authorLeft">
-                    <view class="authorPhoto"></view>
-                    <view class="nickName">桥晓明</view>
-                </view>
-                <view class="authorRight">
-                    <text >2018-12-09 </text>
-                    <text> 15:23发布</text>
-                </view>
-            </view>
-            <view class="taskInfo">
-                <view class="taskLeft">
-                    <view></view>
-                    <view class="selectIcon"></view>
-                </view>
-                <scroll-view scroll-y="true" class="taskRight">
-                    337434
+                   {{item.content}}
                 </scroll-view>
             </view>
-        </view>
-        <view class="taskCon">
-            <view class="authorInfo">
-                <view class="authorLeft">
-                    <view class="authorPhoto"></view>
-                    <view class="nickName">桥晓明</view>
-                </view>
-                <view class="authorRight">
-                    <text >2018-12-09 </text>
-                    <text> 15:23发布</text>
-                </view>
-            </view>
-            <view class="taskInfo">
-                <view class="taskLeft">
-                    <view></view>
-                </view>
-                <scroll-view scroll-y="true" class="taskRight">
-                </scroll-view>
-
-            </view>
-
         </view>
 
     </scroll-view>
-   <!-- <template is="footNavBar"></template>-->
+    <!-- <template is="footNavBar"></template>-->
 </view>

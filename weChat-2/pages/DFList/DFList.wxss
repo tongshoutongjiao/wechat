@@ -4,7 +4,7 @@
 .listTitle{
     width: 100%;
     height: 90rpx;
-    padding: 10rpx 0;
+    padding: 10rpx 36rpx;
     box-sizing: border-box;
 }
 .listTitle view{
@@ -84,7 +84,6 @@
     width: 100%;
     height: 100%;
     border-radius: 8rpx;
-    background: lightblue;
 }
 .imgWrapper .activeIcon{
     position: absolute;

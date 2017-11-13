@@ -20,15 +20,12 @@ const option = util.extend(util, {
         }]
     },
     onLoad: function (option) {
-        let setWidth=(app.data.system.screenWidth*2-50)/2;
         this.setData({
             bandId: option.bandId,
-            setWidth:setWidth
         });
 
         this.getSelectData();
         this.getUserInfo();
-
     },
     getSelectData: function (e) {
         let that = this;
@@ -61,9 +58,6 @@ const option = util.extend(util, {
         });
     },
 
-    navigatorToPictureList: function (e) {
-        wx.navigateTo({url: '/pages/dfSpecList/dfSpecList?' + util.jsonToParam(e.currentTarget.dataset)});
-    },
 
     // 瀑布流函数
     waterFlow: function (parData, list) {
@@ -74,6 +68,9 @@ const option = util.extend(util, {
         list.forEach(function (item,index) {
             item.selected=false;
             item.index=index;
+
+            item.bg=that.getRandomColor();
+
             column = parData.columns[0].top <= parData.columns[1].top ? parData.columns[0] : parData.columns[1];
 
             // 宽高比
@@ -93,11 +90,11 @@ const option = util.extend(util, {
             column.top += item.boxHeight + 8;
         });
         parData.maxHeight = Math.max(parData.columns[0].top, parData.columns[1].top) + 30;
-        console.log(list);
         return list;
     },
 
     // 选择样式按钮
+
     addSelectIcon: function (e) {
 
         // 思路：点击当前图片，给元素增加一个类名，再次点击，则取消该样式
@@ -105,7 +102,6 @@ const option = util.extend(util, {
             selectIndex=e.currentTarget.dataset.selectIndex,
             data = this.data.selectList[selectIndex].favorites[index];
         data.selected = !data.selected;
-        console.log([`selectList[${selectIndex}].favorites[${index}]`]);
         this.setData({
           [`selectList[${selectIndex}].favorites[${index}]`]: data
         });
@@ -136,8 +132,8 @@ const option = util.extend(util, {
         return data;
     },
 
-
     // 点击完成，执行上传图片操作
+
     dfUpload: function () {
 
         let data = this.data.selectList,
@@ -151,7 +147,9 @@ const option = util.extend(util, {
         });
         imgList.length?this.getDesign(imgList):''
     },
+
     // 上传款图片,最多上传9张图片
+
     getDesign: function (designList) {
         let that = this;
         let data = {
@@ -172,7 +170,9 @@ const option = util.extend(util, {
             }
         })
     },
+
     // 图片上传成功回调函数
+
     reloadCurPage: function () {
         wx.showToast({
             title: '图片上传成功',

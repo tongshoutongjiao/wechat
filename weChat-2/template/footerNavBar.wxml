@@ -1,22 +1,24 @@
 <template name="footNavBar">
     <view class="styleBottom">
         <view class="con photoImg" bindtap="actionSheetTap">
-            <view class="photoImgIcon"></view>
+            <view class="photoImgIcon" style="background-image:url({{!afterPhoto?'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/photoGray.jpg':'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/afterPhoto.png'}}) " ></view>
             <view class="textCon">照片</view>
         </view>
 
 
-        <view class="con taskIndex" bindtap="navigatorToTask">
-            <view class="taskIndexIconWrapper">
-                <view class="taskIndexIcon"></view>
+        <view class="con taskIndex" bindtap="navigatorToTask" data-band-id="{{bandId}}">
+            <view class="taskIndexIconWrapper" style="background-image:url({{!afterTaskIcon?'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/taskIcon.png':'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/afterTaskIcon.png'}}) ">
+                <view class="shadowBox"></view>
+
             </view>
         </view>
 
+        <view class="con dfSelectWrapper" bindtap="navigatorToDFList" data-band-id="{{bandId}}">
+            <view class="selectImgIcon" style="background-image:url({{!afterDf?'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/unselectIcon.png':'http://deepfashion.oss-cn-hangzhou.aliyuncs.com/dfshare/afterDfList.png'}}) ">
 
-        <view class="con dfSelectWrapper">
-            <view class="selectImgIcon"></view>
+
+            </view>
             <view class="textCon">DF精选集</view>
-
         </view>
 
     </view>
